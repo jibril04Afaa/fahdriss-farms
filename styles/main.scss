@@ -2,5 +2,224 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
+html {
+    scroll-behavior: smooth;
+    //overflow-x: hidden;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+// mixins
+@mixin divCentered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// default styles
+nav {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        li {
+
+        }
+        
+    }
+
+    .nav-buttons {
+
+    }
+}
+
+.main {
+    .main-container {
+        .hero {
+            .hero-container {
+                .hero-right {
+                    img {
+
+                    }
+                }
+                .hero-left {
+                    h1 {
+
+                    }
+                    p {
+
+                    }
+
+                    a {
+                        button {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// Media Queries
+
+// mobile screens
+@media (width >= 320px) {
+    .main {
+        
+        
+        .main-container {
+            .hero {
+                border: 2px solid red;
+                padding: 1rem;
+                margin: 1rem;
+                //border: 2px solid red;
+                .hero-container {
+                    @include divCentered();
+                    display: flex;
+                    flex-direction: column-reverse;
+                    .hero-right {
+                        img {
+                            width: 150px;
+                            height: 150px;
+                        }
+                    }
+                    .hero-left {
+                        h1 {
+    
+                        }
+                        p {
+    
+                        }
+    
+                        a {
+                            button {
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .about {
+            border: 2px solid blue;
+            padding: 1rem;
+            margin: 1rem;
+            .about-title {
+                h2 {
+                    text-align: center;
+                }
+            }
+            .about-container {
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                .about-text {
+                    p {
+                        text-align: center;
+                    }
+                }
+
+                .about-image {
+                    img {
+                        width: 300px;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+
+        .best-sellers {
+            // font-family: ;
+            border: 2px solid green;
+            .best-sellers-title {
+                h2 {
+                    text-align: center;
+                }
+            }
+            .best-sellers-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                padding: 1rem;
+                .best-sellers-card {
+                    //border: 2px solid black;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1.2rem;
+                    padding: 1rem;
+                    background-color: #dde6c0;
+                    width: 200px;
+                    height: 300px;
+                    .best-sellers-icons {
+                        border: 2px solid red;
+                        //display: flex;
+                        
+                    }
+                    .best-sellers-image {
+                        img {
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+                    .price, .product-name {
+                        width: 200px;
+                        //border: 2px solid violet;
+                        display: flex;
+                        justify-content: flex-end;
+                        padding: 0.4rem;
+                        h5 {
+
+                        }
+                    }
+                    .product-name {
+                        h5 {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Tablets 
+@media (width >= 768px) {
+
+}
+
+// Laptops 
+@media (width >= 1024px) {
+
+}
+
+// Large laptops
+@media (width >= 1440px) {
+
+}

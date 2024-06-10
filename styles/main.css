@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+@media (width >= 320px) {
+  .main .main-container .hero {
+    border: 2px solid red;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .main .main-container .hero .hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .main .main-container .hero .hero-container .hero-right img {
+    width: 150px;
+    height: 150px;
+  }
+  .main .about {
+    border: 2px solid blue;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .main .about .about-title h2 {
+    text-align: center;
+  }
+  .main .about .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main .about .about-container .about-text p {
+    text-align: center;
+  }
+  .main .about .about-container .about-image img {
+    width: 300px;
+    height: 150px;
+  }
+  .main .best-sellers {
+    border: 2px solid green;
+  }
+  .main .best-sellers .best-sellers-title h2 {
+    text-align: center;
+  }
+  .main .best-sellers .best-sellers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .main .best-sellers .best-sellers-container .best-sellers-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1rem;
+    background-color: #dde6c0;
+    width: 200px;
+    height: 300px;
+  }
+  .main .best-sellers .best-sellers-container .best-sellers-card .best-sellers-icons {
+    border: 2px solid red;
+  }
+  .main .best-sellers .best-sellers-container .best-sellers-card .best-sellers-image img {
+    width: 100px;
+    height: 100px;
+  }
+  .main .best-sellers .best-sellers-container .best-sellers-card .price, .main .best-sellers .best-sellers-container .best-sellers-card .product-name {
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.4rem;
+  }
+}/*# sourceMappingURL=main.css.map */
