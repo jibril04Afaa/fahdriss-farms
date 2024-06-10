@@ -2,12 +2,119 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+// empty ".main" class code
+/*
+.main {
+        
+        
+    .main-container {
+        .hero {
+
+            .hero-container {
+
+                .hero-right {
+                    img {
+
+                    }
+                }
+                .hero-left {
+                    h1 {
+
+                    }
+                    p {
+
+                    }
+
+                    // Catalog
+                    a {
+                        button {
+                        
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .about {
+
+        .about-title {
+            h2 {
+
+            }
+        }
+        .about-container {
+
+            .about-text {
+                p {
+
+                }
+            }
+
+            .about-image {
+                img {
+
+                }
+            }
+        }
+    }
+
+    .best-sellers {
+
+        .best-sellers-title {
+            h2 {
+
+            }
+        }
+        .best-sellers-container {
+
+            .best-sellers-card {
+
+                .best-sellers-icons {
+
+                    
+                }
+                .best-sellers-image {
+                    img {
+
+                    }
+                }
+                .price, .product-name {
+
+                    h5 {
+
+                    }
+                }
+                .product-name {
+                    h5 {
+
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+
+        p {
+
+        }
+        .social-media-links {
+            ul {
+
+            }
+        }
+    }
+}
+*/
 
 html {
     scroll-behavior: smooth;
     //overflow-x: hidden;
+    background-color: #eeefe2;
 }
 
 ul, li {
@@ -52,9 +159,13 @@ nav {
 }
 
 .main {
+        
+        
     .main-container {
         .hero {
+
             .hero-container {
+
                 .hero-right {
                     img {
 
@@ -68,17 +179,87 @@ nav {
 
                     }
 
+                    // Catalog
                     a {
                         button {
-
+                        
                         }
                     }
                 }
             }
         }
     }
-}
 
+    .about {
+
+        .about-title {
+            h2 {
+
+            }
+        }
+        .about-container {
+
+            .about-text {
+                p {
+
+                }
+            }
+
+            .about-image {
+                img {
+
+                }
+            }
+        }
+    }
+
+    .best-sellers {
+
+        .best-sellers-title {
+            h2 {
+
+            }
+        }
+        .best-sellers-container {
+
+            .best-sellers-card {
+
+                .best-sellers-icons {
+
+                    
+                }
+                .best-sellers-image {
+                    img {
+
+                    }
+                }
+                .price, .product-name {
+
+                    h5 {
+
+                    }
+                }
+                .product-name {
+                    h5 {
+
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+
+        p {
+
+        }
+        .social-media-links {
+            ul {
+
+            }
+        }
+    }
+}
 
 
 // Media Queries
@@ -90,14 +271,17 @@ nav {
         
         .main-container {
             .hero {
-                border: 2px solid red;
+                //border: 2px solid red;
                 padding: 1rem;
                 margin: 1rem;
                 //border: 2px solid red;
                 .hero-container {
-                    @include divCentered();
+                    //border: 2px solid pink;
                     display: flex;
                     flex-direction: column-reverse;
+                    padding: 1rem;
+                    
+                    gap: 3rem;
                     .hero-right {
                         img {
                             width: 150px;
@@ -114,7 +298,15 @@ nav {
     
                         a {
                             button {
-                                
+                                font-size: 1.3rem;
+                                border-radius: 5px;
+                                width: 120px;
+                                border: 0;
+                                color: white;
+                                background-color: #898E4C;
+                                padding: 0.5rem;
+                                display: flex;
+                                justify-content: center;
                             }
                         }
                     }
@@ -127,12 +319,12 @@ nav {
             padding: 1rem;
             margin: 1rem;
             .about-title {
+                margin: 1rem;
                 h2 {
                     text-align: center;
                 }
             }
             .about-container {
-                
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -154,7 +346,7 @@ nav {
         }
 
         .best-sellers {
-            // font-family: ;
+            
             border: 2px solid green;
             .best-sellers-title {
                 h2 {
@@ -203,6 +395,22 @@ nav {
 
                         }
                     }
+                }
+            }
+        }
+
+        footer {
+            margin: 1rem;
+            padding: 1rem;
+            border: 2px solid palevioletred;
+            display: flex;
+            flex-direction: column;
+            p {
+                text-align: center;
+            }
+            .social-media-links {
+                ul {
+                    @include divCentered();
                 }
             }
         }

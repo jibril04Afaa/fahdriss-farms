@@ -2,10 +2,116 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+/*
+.main {
+
+
+    .main-container {
+        .hero {
+
+            .hero-container {
+
+                .hero-right {
+                    img {
+
+                    }
+                }
+                .hero-left {
+                    h1 {
+
+                    }
+                    p {
+
+                    }
+
+                    // Catalog
+                    a {
+                        button {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .about {
+
+        .about-title {
+            h2 {
+
+            }
+        }
+        .about-container {
+
+            .about-text {
+                p {
+
+                }
+            }
+
+            .about-image {
+                img {
+
+                }
+            }
+        }
+    }
+
+    .best-sellers {
+
+        .best-sellers-title {
+            h2 {
+
+            }
+        }
+        .best-sellers-container {
+
+            .best-sellers-card {
+
+                .best-sellers-icons {
+
+
+                }
+                .best-sellers-image {
+                    img {
+
+                    }
+                }
+                .price, .product-name {
+
+                    h5 {
+
+                    }
+                }
+                .product-name {
+                    h5 {
+
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+
+        p {
+
+        }
+        .social-media-links {
+            ul {
+
+            }
+        }
+    }
+}
+*/
 html {
   scroll-behavior: smooth;
+  background-color: #eeefe2;
 }
 
 ul, li {
@@ -30,24 +136,36 @@ nav ul {
 }
 @media (width >= 320px) {
   .main .main-container .hero {
-    border: 2px solid red;
     padding: 1rem;
     margin: 1rem;
   }
   .main .main-container .hero .hero-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    display: flex;
     flex-direction: column-reverse;
+    padding: 1rem;
+    gap: 3rem;
   }
   .main .main-container .hero .hero-container .hero-right img {
     width: 150px;
     height: 150px;
   }
+  .main .main-container .hero .hero-container .hero-left a button {
+    font-size: 1.3rem;
+    border-radius: 5px;
+    width: 120px;
+    border: 0;
+    color: white;
+    background-color: #898E4C;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+  }
   .main .about {
     border: 2px solid blue;
     padding: 1rem;
+    margin: 1rem;
+  }
+  .main .about .about-title {
     margin: 1rem;
   }
   .main .about .about-title h2 {
@@ -101,5 +219,20 @@ nav ul {
     display: flex;
     justify-content: flex-end;
     padding: 0.4rem;
+  }
+  .main footer {
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid palevioletred;
+    display: flex;
+    flex-direction: column;
+  }
+  .main footer p {
+    text-align: center;
+  }
+  .main footer .social-media-links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }/*# sourceMappingURL=main.css.map */
