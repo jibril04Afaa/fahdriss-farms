@@ -84,8 +84,7 @@ nav ul {
 }
 @media (min-width: 320px) {
   nav {
-    display: flex;
-    justify-content: space-between;
+    display: none;
   }
   nav ul {
     display: flex;

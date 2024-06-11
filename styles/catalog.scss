@@ -151,8 +151,7 @@ nav {
 // mobile screens
 @media (min-width: 320px) {
     nav {
-        display: flex;
-        justify-content: space-between;
+        display: none;
         .logo {
         }
         ul {
