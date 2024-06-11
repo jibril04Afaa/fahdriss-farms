@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    //overflow-x: hidden;
+    background-color: #eeefe2;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button {
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    background-color: #dde6c0;
+}
+
+// mixins
+@mixin divCentered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+// default styles
+nav {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        li {
+
+        }
+        
+    }
+
+    .nav-buttons {
+
+    }
+}
+
+
+
+.title {
+    text-align: center;
+}
+
+.categories {
+    ul {
+        
+        li {
+            cursor: pointer;
+            &:hover {
+                color: #96d5b5;
+                transition: 0.3s all ease-in-out;
+            }
+        }
+
+
+    }
+}
+
+.sorting {
+    select {
+        background: none;
+        border: none;
+        option {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+
+
+// product card
+.products {
+    .products-container {
+        .product-card {
+            border-radius: 10px;
+            background-color: #dde6c0;
+            // width: 200px;
+            // height: 300px;
+            .icons {
+                display: flex;
+                justify-content: flex-end;
+                padding: 0.5rem;
+                i {
+                    padding: 0.4rem;
+                }
+                .fa-heart {
+        
+                }
+            }
+        
+            .product-image {
+                @include divCentered();
+                img {
+                    
+                }
+            }
+        
+            .product-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0.5rem;
+                gap: 1rem;
+                h5 {
+        
+                }
+        
+                .product-desc {
+                    
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+// Media Queries
+
+// mobile screens
+@media (min-width: 320px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        .logo {
+        }
+        ul {
+            display: flex;
+            justify-content: center;
+            li {
+    
+            }
+            
+        }
+    
+        .nav-buttons {
+    
+        }
+    }
+    
+    .title {
+
+    }
+
+    .categories {
+        ul {
+            display: flex;
+            justify-content: space-around;
+            margin: 2.5rem;
+            li {
+
+            }
+        }
+    }
+
+    .sorting {
+        //border: 2px solid red;
+        display: flex;
+        justify-content: flex-end;
+        select {
+            font-size: 1.2rem;
+            option {
+                
+            }
+        }
+    }
+
+    // Main code
+    main {
+        .main-container {
+            .products {
+                .products-container {
+                    .product-card {
+
+                    }
+                }
+            }
+        }
+    }
+      
+    // products
+    .products {
+        
+        .products-container {
+            //border: 2px solid red;
+            display: grid;
+            grid-template-rows: repeat(3, 300px);
+            grid-template-columns: repeat(2, 200px);
+            gap: 1.2rem;
+            // Product card
+            .product-card {
+                //border: 2px solid blue;
+                .icons {
+                    i {
+
+                    }
+                    .fa-heart {
+
+                    }
+                }
+
+                .product-image {
+                    img {
+                        width: 150px;
+                        height: 150px;
+                    }
+                }
+
+                .product-info {
+                    h5 {
+
+                    }
+
+                    .product-desc {
+                        font-size: 1.2rem;
+
+                    }
+
+                    // about this product
+                    .about-this-product {
+                        background-color: blue;
+                        color: black;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
+}
+
+// Tablets 
+@media (width >= 768px) {
+
+}
+
+// Laptops 
+@media (width >= 1024px) {
+
+}
+
+// Large laptops
+@media (width >= 1440px) {
+
+}
