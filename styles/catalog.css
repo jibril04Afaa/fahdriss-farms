@@ -109,10 +109,6 @@ nav ul {
     grid-template-columns: repeat(2, 200px);
     gap: 1.2rem;
   }
-  .products .products-container .product-card .product-image img {
-    width: 150px;
-    height: 150px;
-  }
   .products .products-container .product-card .product-info .product-desc {
     font-size: 1.2rem;
   }
@@ -121,4 +117,12 @@ nav ul {
     color: black;
     font-size: 2rem;
   }
+}
+.garlic-powder, .agushi, .chili, .ginger-powder, .curry-powder, .kebab-powder, .paprika {
+  height: 130px;
+}
+
+.date-syrup {
+  height: 150px;
+  width: 150px;
 }/*# sourceMappingURL=catalog.css.map */

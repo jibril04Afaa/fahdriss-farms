@@ -7,6 +7,7 @@
     font-style: normal;
 }
 
+
 html {
     scroll-behavior: smooth;
     //overflow-x: hidden;
@@ -231,8 +232,8 @@ nav {
 
                 .product-image {
                     img {
-                        width: 150px;
-                        height: 150px;
+                        // width: 150px;
+                        // height: 150px;
                     }
                 }
 
@@ -275,4 +276,17 @@ nav {
 // Large laptops
 @media (width >= 1440px) {
 
+}
+
+.garlic-powder, .agushi, .chili, .ginger-powder, .curry-powder, .kebab-powder, .paprika {
+    height: 130px;
+}
+
+.date-syrup {
+    height: 150px;
+    width: 150px;
+}
+
+.agushi {
+    
 }
