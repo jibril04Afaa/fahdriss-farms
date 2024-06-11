@@ -23,4 +23,13 @@ learnMoreBtns.forEach(learnMoreBtn => {
 })
 
 // sorting
-let 
+let sortByPrice = document.querySelector()
+let sortByPopularity = document.querySelector()
+let sortByHealthiest = document.querySelector()
+
+
+
+// sortByPrice.addEventListener('click', function() {
+//     // sort products by price
+
+// })

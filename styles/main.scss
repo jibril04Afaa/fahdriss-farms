@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 // empty ".main" class code
@@ -200,6 +202,7 @@ nav {
     .about {
 
         .about-title {
+            color: #898E4C;
             h2 {
 
             }
@@ -214,7 +217,7 @@ nav {
 
             .about-image {
                 img {
-
+                    border-radius: 5px;
                 }
             }
         }
@@ -223,6 +226,7 @@ nav {
     .best-sellers {
 
         .best-sellers-title {
+            color: #898E4C;
             h2 {
 
             }
@@ -272,7 +276,10 @@ nav {
 // Media Queries
 
 // mobile screens
-@media (width >= 320px) {
+@media (min-width : 320px) {
+    nav {
+        display: none;
+    }
     .main {
         
         
@@ -351,8 +358,8 @@ nav {
                     img {
                         width: 270px;
                         height: 150px;
-                        border-radius: 10px;
-                        box-shadow: 5px 5px 5px #adba25;
+                        
+                        //box-shadow: 5px 5px 5px #adba25;
                     }
                 }
             }
@@ -448,16 +455,386 @@ nav {
 }
 
 // Tablets 
-@media (width >= 768px) {
+@media (min-width : 768px) {
+    nav {
+        display: none;
+    }
+    .main {
+        
+        
+        .main-container {
+            .hero {
 
+                .hero-container {
+                    //border: 2px solid blue;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-around;
+                    .hero-right {
+                        img {
+
+                        }
+                    }
+                    .hero-left {
+
+                        h1 {
+                        }
+                        p {
+    
+                        }
+                        // Catalog
+                        a {
+                            button {
+                                font-size: 1.3rem;
+                                border-radius: 5px;
+                                width: 120px;
+                                border: 0;
+                                color: white;
+                                background-color: #898E4C;
+                                padding: 0.5rem;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-top: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .about {
+
+            .about-title {
+                h2 {
+                }
+            }
+            .about-container {
+                //border: 2px solid blue;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .about-text {
+                    width: 300px;
+                    //border: 2px solid red;
+                    //border: 2px solid red;
+                    p {
+                    }
+                }
+
+                .about-image {
+                    //border: 2px solid orange;
+                    img {
+                        width: 300px;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+
+        .best-sellers {
+            
+            //border: 2px solid green;
+            .best-sellers-title {
+                h2 {
+                }
+            }
+            .best-sellers-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .best-sellers-card {
+
+                    .best-sellers-icons {
+
+                        .fa-heart {
+                            
+                        }
+                        
+                    }
+                    .best-sellers-image {
+                        img {
+                        }
+                    }
+                    .price, .product-name {
+
+                        h5 {
+
+                        }
+                    }
+                    .product-name {
+                        h5 {
+
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+
+            p {
+
+            }
+            .social-media-links {
+                ul {
+
+                }
+            }
+        }
+    }
 }
 
 // Laptops 
-@media (width >= 1024px) {
+@media (min-width : 1024px) {
+    .main {
+        
+        
+        .main-container {
+            .hero {
 
+                .hero-container {
+                    .hero-right {
+                        
+                        img {
+                            width: 350px;
+                            height: 350px;
+                        }
+                    }
+                    .hero-left {
+
+                        h1 {
+                        }
+                        p {
+    
+                        }
+                        // Catalog
+                        a {
+                            button {
+                                font-size: 1.6rem;
+                                border-radius: 5px;
+                                width: 150px;
+                                border: 0;
+                                color: white;
+                                background-color: #898E4C;
+                                padding: 0.5rem;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-top: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .about {
+
+            .about-title {
+                h2 {
+                    font-size: 2.5rem;
+                }
+            }
+            .about-container {
+                //border: 2px solid blue;
+                padding: 0.5rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .about-text {
+                    width: 400px;
+                    font-size: 2rem;
+                    p {
+                    }
+                }
+
+                .about-image {
+                    img {
+                        width: 450px;
+                        height: 300px;
+                    }
+                }
+            }
+        }
+
+        .best-sellers {
+            
+            //border: 2px solid green;
+            .best-sellers-title {
+                h2 {
+                }
+            }
+            .best-sellers-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .best-sellers-card {
+
+                    .best-sellers-icons {
+
+                        .fa-heart {
+                            
+                        }
+                        
+                    }
+                    .best-sellers-image {
+                        img {
+                        }
+                    }
+                    .price, .product-name {
+
+                        h5 {
+
+                        }
+                    }
+                    .product-name {
+                        h5 {
+
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+
+            p {
+
+            }
+            .social-media-links {
+                ul {
+
+                }
+            }
+        }
+    }
 }
 
 // Large laptops
-@media (width >= 1440px) {
+@media (min-width: 1440px) {
+    .main {
+        
+        
+        .main-container {
+            .hero {
 
+                .hero-container {
+                    .hero-right {
+                        
+                        img {
+                            width: 350px;
+                            height: 350px;
+                        }
+                    }
+                    .hero-left {
+
+                        h1 {
+                            font-size: 3rem;
+                        }
+                        p {
+                            font-size: 1.5rem;
+                        }
+                        // Catalog
+                        a {
+                            button {
+                                font-size: 2rem;
+                                border-radius: 5px;
+                                width: 200px;
+                                border: 0;
+                                color: white;
+                                background-color: #898E4C;
+                                padding: 0.5rem;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin-top: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .about {
+
+            .about-title {
+                h2 {
+                    font-size: 3rem;
+                }
+            }
+            .about-container {
+                //border: 2px solid blue;
+                padding: 0.5rem;
+                margin-top: 3rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .about-text {
+                    width: 550px;
+                    font-size: 2.5rem;
+                    p {
+                    }
+                }
+
+                .about-image {
+                    img {
+                        width: 420px;
+                        height: 300px;
+                    }
+                }
+            }
+        }
+
+        .best-sellers {
+            
+            //border: 2px solid green;
+            .best-sellers-title {
+                h2 {
+                }
+            }
+            .best-sellers-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .best-sellers-card {
+
+                    .best-sellers-icons {
+
+                        .fa-heart {
+                            
+                        }
+                        
+                    }
+                    .best-sellers-image {
+                        img {
+                        }
+                    }
+                    .price, .product-name {
+
+                        h5 {
+
+                        }
+                    }
+                    .product-name {
+                        h5 {
+
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+
+            p {
+
+            }
+            .social-media-links {
+                ul {
+
+                }
+            }
+        }
+    }
 }
