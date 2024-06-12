@@ -130,12 +130,17 @@ a {
   color: inherit;
 }
 
-button, i {
+button, li, i {
   cursor: pointer;
 }
 
 .garlic-powder, .ginger-powder, .kebab-powder, .date-syrup {
   height: 130px;
+}
+
+.search-bar {
+  background-color: #898E4C;
+  color: white;
 }
 
 nav {
@@ -145,6 +150,9 @@ nav {
 nav ul {
   display: flex;
   justify-content: center;
+}
+nav ul li {
+  color: #898E4C;
 }
 .main .main-container .hero .hero-container {
   display: flex;
@@ -159,7 +167,12 @@ nav ul {
 .main .main-container .hero .hero-container .hero-left h1 {
   text-align: center;
 }
-.main .about .about-title {
+.main .about .about-container .all-about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main .about .about-container .all-about-text .about-title {
   color: #898E4C;
 }
 .main .about .about-container .about-image img {
@@ -310,7 +323,18 @@ nav ul {
 }
 @media (min-width: 768px) {
   nav {
-    display: none;
+    display: flex;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+  nav .nav-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem;
+  }
+  nav .nav-buttons i {
+    color: #898E4C;
   }
   .main .main-container .hero {
     background-image: url("/img/leaf2.png");

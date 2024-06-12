@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #eeefe2;
+    overflow-x: hidden;
+    color: #898E4C;
+}
+
+h1 {text-align: center;}
+
+ul, li {
+    list-style-type: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button li, i {
+    cursor: pointer;
+}
+
+// mixins
+@mixin divCentered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// default styles
+h1 {
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    //align-items: flex-start;
+    .basket {
+        //border: 2px solid red;
+        .basket-container {
+            border: 2px solid #898E4C;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 300px;
+            .product-image {
+                img {
+
+                }
+            }
+
+            .name {
+                h5 {
+
+                }
+                .product-name {
+
+                }
+            }
+
+            .quantity {
+                h5 {
+                    
+                }
+                .product-quantity {
+
+                }
+            }
+
+            .price {
+                h5 {
+                    
+                }
+                .product-price {
+                    
+                }
+            }
+        }
+
+    }
+
+    .total {
+        .total-container {
+
+        }
+    }
+}
+
+
+// Media Queries
+
+// mobile screens
+@media (min-width: 320px) {
+
+}
+
+// Tablets 
+@media (min-width: 768px) {
+
+}
+
+// Laptops 
+@media (min-width : 1024px) {
+
+}
+
+// Large laptops
+@media (min-width : 1440px) {
+
+}

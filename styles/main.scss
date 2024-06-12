@@ -136,13 +136,20 @@ a {
 }
 
 
-button, i {
+button, li, i {
     cursor: pointer;
 }
 
 .garlic-powder, .ginger-powder, .kebab-powder, .date-syrup {
     height: 130px;
 
+}
+
+// search bar class
+.search-bar {
+    background-color: #898E4C;
+    color: white;
+    //font-size: 1.2rem;
 }
 
 // mixins
@@ -163,13 +170,17 @@ nav {
         display: flex;
         justify-content: center;
         li {
-
+            color: #898E4C;
         }
         
     }
 
     .nav-buttons {
-
+        ul {
+            li {
+                
+            }
+        }
     }
 }
 
@@ -221,14 +232,21 @@ nav {
     }
 
     .about {
-
-        .about-title {
-            color: #898E4C;
-            h2 {
-
-            }
-        }
+        //border: 2px solid red;
         .about-container {
+            .all-about-text {
+                //height: 700px;
+                //border: 2px solid blue;
+                display: flex ;
+                flex-direction: column;
+                justify-content: space-between;
+                .about-title {
+                    color: #898E4C;
+                    h2 {
+        
+                    }
+                }
+            }
 
             .about-text {
                 p {
@@ -242,6 +260,9 @@ nav {
                 }
             }
         }
+
+
+
     }
 
     .best-sellers {
@@ -533,7 +554,30 @@ nav {
 // Tablets 
 @media (min-width : 768px) {
     nav {
-        display: none;
+        display: flex;
+        .logo {
+
+        }
+
+        ul {
+            //border: 2px solid red;
+            gap: 1rem;
+            
+            li {
+                
+                
+            }
+        }
+
+        .nav-buttons {
+            //border: 2px solid green;
+            display: flex;
+            justify-content: space-around;
+            padding: 0.5rem;
+            i { 
+                color: #898E4C;
+            }
+        }
     }
     .main {
         

@@ -19,12 +19,45 @@
 
         </div>
         <ul>
-            <li>SHOP</li>
-            <li>ABOUT</li>
-            <li>CONTACT US</li>
+            <a href="catalog.html">
+                <li>SHOP</li>
+            </a>
+
+            <a href="#about">
+                <li>ABOUT</li>
+            </a>
+           
+            <a href="#contact">
+                <li>CONTACT US</li>
+            </a>
+
         </ul>
 
         <div class="nav-buttons">
+            <ul>
+                <li class="search-container">
+                    <!--search-->
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </li>
+
+                <li>
+                    <!-- heart -->
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                </li>
+
+                <li>
+                    <!-- shopping bag-->
+                    <a href="cart.html">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </a>
+                    
+                </li>
+
+                <li>
+                    <!-- user -->
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </li>
+            </ul>
 
         </div>
     </nav>
@@ -79,20 +112,22 @@
 
         <!--About-->
         <div class="about">
-            <div class="about-title">
-                <h2>About</h2>
-            </div>
-            <div class="about-container">
 
-                <div class="about-text">
-                    <p>
-                        Your go-to store for authentic African spices and premium health supplements.
-                        With a commitment to quality and customer satisfaction, we offer nationwide
-                        delivery, ensuring you can enjoy our products no matter where you are. Discover
-                        the richness of African flavors and the benefits of our carefully selected health
-                        supplements today. 
-                    </p>
+            <div class="about-container" id="about">
+                <div class="all-about-text">
+                    <div class="about-title">
+                        <h2>About</h2>
+                    </div>
+    
+                    <div class="about-text">
+                        <p>
+                            Your go-to store for authentic African spices and premium health supplements.
+                            With a commitment to quality and customer satisfaction, we offer nationwide
+                            delivery, ensuring you can enjoy our products no matter where you are. 
+                        </p>
+                    </div>
                 </div>
+
 
                 <div class="about-image">
                     <img src="./img/products.png" alt="">
@@ -208,7 +243,7 @@
         </div>
 
         <!--Footer-->
-        <footer>
+        <footer id="contact">
             <p>Fahdriss Farms <br> All right reserved, 2024</p>
 
             <nav>
@@ -247,6 +282,6 @@
     <!--JavaScript Files-->
     <script src="/js/script.js"></script>
     <script src="/js/server.js"></script>
-    <script src="/js/orders.js"></script>
+    <script src="/js/cart.js"></script>
 </body>
 </html>

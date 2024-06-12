@@ -15,13 +15,27 @@ hearts.forEach(heart => {
 })
 
 
-const addToCart = () => {
-    alert("Added to cart!")
-}
+// whatsappBtn.addEventListener('click', function() {
 
-bag.addEventListener('click', addToCart)
+// })
+
+// Navbar functionality
+let searchContainer = document.querySelector(".search-container")
+let searchBtn = document.querySelector(".fa-search")
+let user = document.querySelector("fa-user")
+
+searchBtn.addEventListener('click', function() {
+    // bring up search bar
+    let searchBar = document.createElement('input')
+    searchContainer.appendChild(searchBar)
+    searchBar.classList.add("search-bar")
+    searchBar.placeholder = "Search for products..."
 
 
-whatsappBtn.addEventListener('click', function() {
-    alert(`Whatsapp : +233 246432295 + ${<br></br>} + Calls : +233 246432295 and +233 201133903 ` + <br></br>)
+    // implement searching algorithm to search for products in catalog.html
+    
 })
+
+// user.addEventListener('click', function() {
+//     // display user page with order history
+// })

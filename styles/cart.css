@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #eeefe2;
+  overflow-x: hidden;
+  color: #898E4C;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button li, i {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container .basket .basket-container {
+  border: 2px solid #898E4C;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+}/*# sourceMappingURL=cart.css.map */
