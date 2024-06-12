@@ -121,8 +121,9 @@
 
 html {
     scroll-behavior: smooth;
-    //overflow-x: hidden;
-    background-color: #eeefe2;
+    overflow-x: hidden;
+    background-color: #fffffa;
+    // background-image: url("img/leaf2.png");
 }
 
 ul, li {
@@ -135,7 +136,7 @@ a {
 }
 
 
-button {
+button, i {
     cursor: pointer;
 }
 
@@ -168,7 +169,7 @@ nav {
 }
 
 .main {
-        
+      
         
     .main-container {
         .hero {
@@ -189,16 +190,24 @@ nav {
                     flex-direction: column;
                     align-items: center;
                     h1 {
-
+                        text-align: center;
                     }
                     p {
-
+                        
                     }
 
                     // Catalog
                     a {
+                        // border: 2px solid pink;
+                        // display: flex;
+                        // justify-content: space-between;
+                        // align-items: center;
                         button {
-                        
+
+                            i {
+                                //border: 2px solid red;
+
+                            }
                         }
                     }
                 }
@@ -241,7 +250,10 @@ nav {
         .best-sellers-container {
 
             .best-sellers-card {
-
+                background-color: #f4faf0;
+                display: flex;
+                flex-direction: column;
+                //justify-content: space-between;
                 .best-sellers-icons {
 
                     
@@ -267,7 +279,7 @@ nav {
     }
 
     footer {
-
+        
         p {
 
         }
@@ -287,14 +299,39 @@ nav {
     nav {
         display: none;
     }
+
+    // // leaves
+    // .leaves {
+
+
+    //     .leaves-container {
+    //         .leaf {
+
+    //         }
+    //         .leaf-1 {
+
+    //         }
+    //         .leaf-2 {
+                
+    //         }
+    //         .leaf-3 {
+
+    //         }
+    //     }
+    // }
+
+
     .main {
         
         
         .main-container {
             .hero {
+                margin-top: 4rem;
                 //border: 2px solid red;
-                padding: 1rem;
-                margin: 1rem;
+                background-image: url("/img/leaf2.png");
+                background-repeat: no-repeat;
+                // padding: 1rem;
+                // margin: 1rem;
                 //border: 2px solid red;
                 .hero-container {
                     //border: 2px solid pink;
@@ -305,6 +342,10 @@ nav {
                     
                     gap: 3rem;
                     .hero-right {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        //border: 2px solid blue;
                         img {
                             width: 300px;
                             height: 300px;
@@ -337,10 +378,15 @@ nav {
                     }
                 }
             }
+
+
         }
 
         .about {
             //border: 2px solid blue;
+            background-image: url("/img/leaf3.png");
+            background-repeat: repeat-y;
+            background-position: center;
             padding: 1rem;
             margin: 1rem;
             .about-title {
@@ -383,27 +429,31 @@ nav {
             }
             .best-sellers-container {
                 display: flex;
-                flex-direction: column;
+                //flex-direction: column;
+                overflow-x: scroll;
                 align-items: center;
                 gap: 1rem;
                 padding: 1rem;
                 .best-sellers-card {
-                    //border: 2px solid black;
                     border-radius: 10px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 1.2rem;
-                    padding: 1rem;
                     background-color: #dde6c0;
+                    //border: 2px solid black;
+                    // border-radius: 10px;
+                    // display: flex;
+                    // flex-direction: column;
+                    // align-items: center;
+                    // gap: 1.2rem;
+                    // padding: 1rem;
+                    // background-color: #dde6c0;
                     width: 200px;
                     height: 300px;
                     .best-sellers-icons {
-                        //border: 2px solid red;
-                        width: 200px;
                         display: flex;
                         justify-content: flex-end;
-                        gap: 0.5rem;
+                        padding: 0.5rem;
+                        i {
+                            padding: 0.5rem;
+                        }
                         .fa-heart {
                             color: white;
                             
@@ -411,17 +461,20 @@ nav {
                         
                     }
                     .best-sellers-image {
+                        display: flex;
+                        justify-content: center;
                         img {
                             width: 100px;
                             height: 100px;
                         }
                     }
-                    .price, .product-name {
+                    .price {
                         width: 200px;
                         //border: 2px solid violet;
                         display: flex;
                         justify-content: flex-end;
                         padding: 0.4rem;
+                        
                         h5 {
 
                         }
@@ -430,6 +483,13 @@ nav {
                         h5 {
 
                         }
+                    }
+
+                    .price, .product-name {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 1rem;
                     }
                 }
             }
@@ -472,6 +532,8 @@ nav {
         
         .main-container {
             .hero {
+                background-image: url("/img/leaf2.png");
+                background-repeat: repeat-x;
 
                 .hero-container {
                     //border: 2px solid blue;
@@ -512,6 +574,7 @@ nav {
         }
 
         .about {
+            background-image: none;
 
             .about-title {
                 h2 {
