@@ -140,6 +140,11 @@ button, i {
     cursor: pointer;
 }
 
+.garlic-powder, .ginger-powder, .kebab-powder, .date-syrup {
+    height: 130px;
+
+}
+
 // mixins
 @mixin divCentered {
     display: flex;
@@ -464,8 +469,8 @@ nav {
                         display: flex;
                         justify-content: center;
                         img {
-                            width: 100px;
-                            height: 100px;
+                            // width: 100px;
+                            // height: 100px;
                         }
                     }
                     .price {
@@ -489,7 +494,7 @@ nav {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        gap: 1rem;
+                        //gap: 1rem;
                     }
                 }
             }
@@ -516,6 +521,9 @@ nav {
                     display: flex;
                     justify-content: center;
                     gap: 0.5rem;
+                    i {
+                        font-size: 1.5rem;
+                    }
                 }
             }
         }
@@ -649,7 +657,9 @@ nav {
             }
             .social-media-links {
                 ul {
-
+                    i {
+                        font-size: 2rem;
+                    }
                 }
             }
         }
@@ -775,7 +785,9 @@ nav {
             }
             .social-media-links {
                 ul {
-
+                    i {
+                        font-size: 2rem;
+                    }
                 }
             }
         }

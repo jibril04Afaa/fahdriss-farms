@@ -264,7 +264,106 @@ nav {
 
 // Tablets 
 @media (width >= 768px) {
+    nav {
 
+        .logo {
+        }
+        ul {
+
+            li {
+    
+            }
+            
+        }
+    
+        .nav-buttons {
+    
+        }
+    }
+    
+    .title {
+
+    }
+
+    .categories {
+        ul {
+
+            li {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .sorting {
+
+        select {
+
+            option {
+                
+            }
+        }
+    }
+
+    // Main code
+    main {
+        .main-container {
+            .products {
+                .products-container {
+                    margin-top: 2rem;
+                    //border: 2px solid red;
+                    display: grid;
+                    grid-template-rows: repeat(2, 350px);
+                    grid-template-columns: repeat(4, 250px);
+                    place-content: center;
+                    .product-card {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+      
+    // products
+    .products {
+        
+        .products-container {
+
+            // Product card
+            .product-card {
+
+                .icons {
+                    i {
+
+                    }
+                    .fa-heart {
+
+                    }
+                }
+
+                .product-image {
+                    img {
+
+                    }
+                }
+
+                .product-info {
+                    h5 {
+
+                    }
+
+                    .product-desc {
+
+                    }
+
+                    // about this product
+                    .about-this-product {
+
+                    }
+                }
+            }
+        }
+
+    }
 }
 
 // Laptops 

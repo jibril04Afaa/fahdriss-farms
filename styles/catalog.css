@@ -117,6 +117,21 @@ nav ul {
     font-size: 2rem;
   }
 }
+@media (width >= 768px) {
+  .categories ul li {
+    font-size: 1.5rem;
+  }
+  main .main-container .products .products-container {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-rows: repeat(2, 350px);
+    grid-template-columns: repeat(4, 250px);
+    place-content: center;
+  }
+  main .main-container .products .products-container .product-card {
+    margin-top: 1rem;
+  }
+}
 .garlic-powder, .agushi, .chili, .ginger-powder, .curry-powder, .kebab-powder, .paprika {
   height: 130px;
 }

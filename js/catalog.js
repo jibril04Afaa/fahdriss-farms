@@ -5,7 +5,6 @@ let productInfo = document.querySelector(".product-info")
 let productDescs = document.querySelectorAll(".product-desc")
 
 
-
 learnMoreBtns.forEach(learnMoreBtn => {
     learnMoreBtn.addEventListener('click', function() {
         // toggle product descriptions
@@ -22,10 +21,43 @@ learnMoreBtns.forEach(learnMoreBtn => {
     
 })
 
+
+// list titles
+let spices = document.querySelector(".spices")
+let milletAndPorridges = document.querySelector(".millet")
+let healthSupplements = document.querySelector(".health")
+
+// let HTMLspices = []
+// let HTMLmillets = []
+// let HTMLhealths = []
+
+
+spices.addEventListener('click', function() {
+    // show all items with the class of 'spices'
+    
+})
+
+millet.addEventListener('click', function() {
+    // show all items with the class of 'millet'
+})
+
+health.addEventListener('click', function() {
+    // show all items with the class of 'health'
+    let healthItems = document.querySelectorAll('.health')
+    healthItems.forEach(healthItem => {
+        // show each health item
+    })
+})
+
+
+
+
 // sorting
 let sortByPrice = document.querySelector()
 let sortByPopularity = document.querySelector()
 let sortByHealthiest = document.querySelector()
+
+
 
 
 
