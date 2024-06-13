@@ -393,7 +393,10 @@ nav {
 // contact us
 .contact-us {
     .contact-us-container {
-        
+        //border: 2px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         h2, h3 {
             color: #898E4C;
         }
