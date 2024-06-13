@@ -180,21 +180,22 @@ nav ul li {
 .main .main-container .hero .hero-container .hero-left h1 {
   text-align: center;
 }
-.main .about .about-container .all-about-text {
+.about .about-container .all-about-text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.main .about .about-container .all-about-text .about-title {
+.about .about-container .all-about-text .about-title {
   color: #898E4C;
 }
-.main .about .about-container .about-image img {
+.about .about-container .about-image img {
   border-radius: 5px;
 }
-.main .best-sellers .best-sellers-title {
+
+.best-sellers .best-sellers-title {
   color: #898E4C;
 }
-.main .best-sellers .best-sellers-container .best-sellers-card {
+.best-sellers .best-sellers-container .best-sellers-card {
   background-color: #f4faf0;
   display: flex;
   flex-direction: column;
