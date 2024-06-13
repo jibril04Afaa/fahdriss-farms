@@ -43,14 +43,20 @@ h1 {
 
 }
 
+h2 {
+
+}
 .container {
     display: flex;
     flex-direction: column;
     //align-items: flex-start;
     .basket {
         //border: 2px solid red;
+        h2 {
+
+        }
         .basket-container {
-            border: 2px solid #898E4C;
+            //border: 2px solid #898E4C;
             border-radius: 5px;
             display: flex;
             justify-content: space-around;
@@ -93,8 +99,40 @@ h1 {
     }
 
     .total {
-        .total-container {
+        h2 {
 
+        }
+        .total-container {
+            .before-total {
+                h5 {
+
+                }
+                .subtotal {
+
+                }
+
+                .shipping-container {
+                    h5 {
+                        
+                    }
+                    .shipping {
+
+                    }
+                }
+            }
+            .final-total {
+                h5 {
+
+                }
+                .total {
+
+                }
+            }
+            .checkout-container {
+                .checkout-btn {
+
+                }
+            }
         }
     }
 }
@@ -104,7 +142,98 @@ h1 {
 
 // mobile screens
 @media (min-width: 320px) {
-
+    .container {
+        border: 2px solid red;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        //align-items: flex-start;
+        .basket {
+            //border: 2px solid red;
+            h2 {
+    
+            }
+            .basket-container {
+                border: 2px solid #898E4C;
+                border-radius: 5px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 300px;
+                .product-image {
+                    img {
+    
+                    }
+                }
+    
+                .name {
+                    h5 {
+    
+                    }
+                    .product-name {
+    
+                    }
+                }
+    
+                .quantity {
+                    h5 {
+                        
+                    }
+                    .product-quantity {
+    
+                    }
+                }
+    
+                .price {
+                    h5 {
+                        
+                    }
+                    .product-price {
+                        
+                    }
+                }
+            }
+    
+        }
+    
+        .total {
+            h2 {
+    
+            }
+            .total-container {
+                .before-total {
+                    h5 {
+    
+                    }
+                    .subtotal {
+    
+                    }
+    
+                    .shipping-container {
+                        h5 {
+                            
+                        }
+                        .shipping {
+    
+                        }
+                    }
+                }
+                .final-total {
+                    h5 {
+    
+                    }
+                    .total {
+    
+                    }
+                }
+                .checkout-container {
+                    .checkout-btn {
+                        
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Tablets 
