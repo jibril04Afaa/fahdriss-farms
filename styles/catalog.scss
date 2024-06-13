@@ -33,6 +33,15 @@ button, i {
     background-color: #dde6c0;
 }
 
+
+.toast-class {
+    background-color: white;
+    color: #898E4C;
+    display: block;
+    height: 200px;
+    width: 600px;
+}
+
 // mixins
 @mixin divCentered {
     display: flex;
@@ -51,7 +60,7 @@ nav {
     }
     ul {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         li {
 
         }
@@ -59,7 +68,11 @@ nav {
     }
 
     .nav-buttons {
-
+        ul {
+            li {
+                color: black;
+            }
+        }
     }
 }
 
@@ -67,6 +80,8 @@ nav {
 
 .title {
     text-align: center;
+    color: #898E4C;
+    
 }
 
 .categories {
@@ -175,7 +190,7 @@ nav {
     }
     
     .title {
-
+        margin-top: 3rem;
     }
 
     .categories {
@@ -272,11 +287,17 @@ nav {
 // Tablets 
 @media (width >= 768px) {
     nav {
-
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        width: 100%;
         .logo {
         }
         ul {
-
+            
             li {
     
             }
@@ -284,12 +305,19 @@ nav {
         }
     
         .nav-buttons {
-    
+            ul {
+                display: flex;
+                justify-content: space-around;
+                
+                li {
+
+                }
+            }
         }
     }
     
     .title {
-
+        margin-top: 3rem;
     }
 
     .categories {

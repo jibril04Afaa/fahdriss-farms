@@ -30,16 +30,29 @@ button, i {
   background-color: #dde6c0;
 }
 
+.toast-class {
+  background-color: white;
+  color: #898E4C;
+  display: block;
+  height: 200px;
+  width: 600px;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
 }
 nav ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
+nav .nav-buttons ul li {
+  color: black;
+}
+
 .title {
   text-align: center;
+  color: #898E4C;
 }
 
 .categories ul li {
@@ -97,6 +110,9 @@ nav ul {
     display: flex;
     justify-content: center;
   }
+  .title {
+    margin-top: 3rem;
+  }
   .categories ul {
     display: flex;
     justify-content: space-around;
@@ -127,6 +143,22 @@ nav ul {
   }
 }
 @media (width >= 768px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 100%;
+  }
+  nav .nav-buttons ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .title {
+    margin-top: 3rem;
+  }
   .categories ul li {
     font-size: 1.5rem;
   }

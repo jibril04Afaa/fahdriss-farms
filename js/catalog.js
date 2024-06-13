@@ -4,6 +4,7 @@ let hearts = document.querySelectorAll(".fa-heart")
 let productInfo = document.querySelector(".product-info")
 let productDescs = document.querySelectorAll(".product-desc")
 let body = document.querySelector("body")
+let bags = document.querySelectorAll(".fa-bag-shopping")
 
 learnMoreBtns.forEach(learnMoreBtn => {
     learnMoreBtn.addEventListener('click', function() {
@@ -20,6 +21,59 @@ learnMoreBtns.forEach(learnMoreBtn => {
     })
     
 })
+
+let favorites = []
+
+
+// toggle red heart
+hearts.forEach(heart => {
+    heart.addEventListener('click', function() {
+        if (heart.style.color === '') {
+            heart.style.color = 'red'
+            setTimeout(() => {
+                alert("Added to favorites! ")
+            }, 100)
+            
+            // add selected item to favorites
+
+        } else {
+            heart.style.color = ''
+            setTimeout(() => {
+                alert("Removed from favorites ")
+            }, 100)
+            // remove selected item from favorites
+        }
+    })
+})
+
+
+// let shoppingBag = document.querySelector("")
+
+// populate basket/bag with items that have the bag color to be black
+function displayBag() {
+
+}
+
+// toggle cart item
+bags.forEach(bag => {
+    bag.addEventListener('click', function() {
+        console.log()
+        if (bag.style.color != 'black') {
+            bag.style.color = 'black'
+            setTimeout(() => {
+                alert("Added to bag! ")
+                
+            }, 100)
+            
+        } else {
+            bag.style.color = 'white'
+            setTimeout(() => {
+                alert("Removed to bag")
+            }, 100)
+        }
+    })
+})
+
 
 
 // list titles
