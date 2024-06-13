@@ -180,6 +180,58 @@ nav ul li {
 .main .main-container .hero .hero-container .hero-left h1 {
   text-align: center;
 }
+.main .main-container .hero .hero-container .hero-left a button {
+  position: relative;
+  margin: auto;
+  width: 120px;
+  line-height: 64px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  border: 2px solid gold;
+  border-radius: 10px;
+  background: gold;
+  cursor: pointer;
+}
+.main .main-container .hero .hero-container .hero-left a button:hover {
+  filter: contrast(1.1);
+}
+.main .main-container .hero .hero-container .hero-left a button:active {
+  filter: contrast(0.9);
+}
+.main .main-container .hero .hero-container .hero-left a button::before, .main .main-container .hero .hero-container .hero-left a button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px solid #898E4C;
+  transition: all 0.5s;
+  animation: clippath 3s infinite linear;
+  border-radius: 10px;
+}
+.main .main-container .hero .hero-container .hero-left a button::after {
+  animation: clippath 3s infinite -1.5s linear;
+}
+@keyframes clippath {
+  0%, 100% {
+    -webkit-clip-path: inset(0 0 98% 0);
+            clip-path: inset(0 0 98% 0);
+  }
+  25% {
+    -webkit-clip-path: inset(0 98% 0 0);
+            clip-path: inset(0 98% 0 0);
+  }
+  50% {
+    -webkit-clip-path: inset(98% 0 0 0);
+            clip-path: inset(98% 0 0 0);
+  }
+  75% {
+    -webkit-clip-path: inset(0 0 0 98%);
+            clip-path: inset(0 0 0 98%);
+  }
+}
 .about .about-container .all-about-text {
   display: flex;
   flex-direction: column;
