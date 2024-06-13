@@ -183,8 +183,6 @@ nav ul li {
 .main .main-container .hero .hero-container .hero-left a button {
   position: relative;
   margin: auto;
-  width: 120px;
-  line-height: 64px;
   text-align: center;
   color: #fff;
   font-size: 20px;
@@ -254,6 +252,36 @@ nav ul li {
 }
 .contact-us .contact-us-container h2, .contact-us .contact-us-container h3 {
   color: #898E4C;
+}
+.contact-us .contact-us-container .map {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.contact-us .contact-us-container .map:hover {
+  filter: contrast(1.1);
+}
+.contact-us .contact-us-container .map:active {
+  filter: contrast(0.9);
+}
+.contact-us .contact-us-container .map::before, .contact-us .contact-us-container .map::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px solid #898E4C;
+  transition: all 0.5s;
+  animation: clippath 3s infinite linear;
+  border-radius: 10px;
+}
+.contact-us .contact-us-container .map::after {
+  animation: clippath 3s infinite -1.5s linear;
 }
 .contact-us .contact-us-container .map iframe {
   border: 0;
