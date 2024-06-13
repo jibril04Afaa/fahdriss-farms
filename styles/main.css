@@ -134,8 +134,12 @@ button, li, i {
   cursor: pointer;
 }
 
-.garlic-powder, .ginger-powder, .kebab-powder, .date-syrup {
+.garlic-powder, .ginger-powder, .kebab-powder {
   height: 130px;
+}
+
+.date-syrup {
+  height: 150px;
 }
 
 .search-bar {
@@ -146,6 +150,11 @@ button, li, i {
 nav {
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  width: 100%;
 }
 nav ul {
   display: flex;
@@ -186,9 +195,34 @@ nav ul li {
   display: flex;
   flex-direction: column;
 }
+.contact-us .contact-us-container h2, .contact-us .contact-us-container h3 {
+  color: #898E4C;
+}
+.contact-us .contact-us-container .map iframe {
+  border: 0;
+  border-radius: 10px;
+}
+
 @media (min-width: 320px) {
   nav {
+    background-color: #fffffa;
+    overflow: hidden;
+    position: relative;
+  }
+  nav ul {
     display: none;
+  }
+  nav ul a {
+    padding: 1rem;
+    display: block;
+    font-size: 1.3rem;
+  }
+  a .fa-bars {
+    background-color: #898E4C;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
   .main .main-container .hero {
     margin-top: 4rem;
@@ -319,6 +353,55 @@ nav ul li {
   }
   .main footer .social-media-links ul i {
     font-size: 1.5rem;
+  }
+  .contact-us .contact-us-container {
+    margin-top: 3rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .contact-us .contact-us-container h2, .contact-us .contact-us-container h3 {
+    color: #898E4C;
+  }
+  .contact-us .contact-us-container .map iframe {
+    border: 0;
+  }
+}
+@media (min-width: 375px) {
+  .contact-us .contact-us-container .map iframe {
+    width: 350px;
+  }
+}
+@media (min-width: 425px) {
+  .contact-us .contact-us-container .map iframe {
+    width: 400px;
+    height: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .contact-us .contact-us-container .map iframe {
+    width: 700px;
+    height: 300px;
+  }
+}
+@media (min-width: 1024px) {
+  .contact-us .contact-us-container h2, .contact-us .contact-us-container h3 {
+    font-size: 2rem;
+  }
+  .contact-us .contact-us-container .map iframe {
+    width: 1000px;
+    height: 300px;
+  }
+}
+@media (min-width: 1440px) {
+  .contact-us .contact-us-container h2, .contact-us .contact-us-container h3 {
+    font-size: 2.5rem;
+  }
+  .contact-us .contact-us-container .map iframe {
+    width: 1400px;
+    height: 300px;
   }
 }
 @media (min-width: 768px) {

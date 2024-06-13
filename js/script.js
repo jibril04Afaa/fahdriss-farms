@@ -14,6 +14,25 @@ hearts.forEach(heart => {
     heart.addEventListener('click', addToFavorites)
 })
 
+// Toggle burger menu
+let burgerMenu = document.querySelector(".fa-bars")
+function toggleMenu() {
+    let links = document.querySelector(".links")
+    console.log(links.style.display)
+    if (links.style.display === 'block') {
+        links.style.display = 'none'
+    } else {
+        links.style.display == 'block'
+    }
+
+
+
+}
+
+burgerMenu.addEventListener('click', toggleMenu)
+
+
+
 
 // whatsappBtn.addEventListener('click', function() {
 

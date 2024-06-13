@@ -11,7 +11,7 @@
 html {
     scroll-behavior: smooth;
     //overflow-x: hidden;
-    background-color: #eeefe2;
+    background-color: #fffffa;
 }
 
 ul, li {
@@ -99,11 +99,17 @@ nav {
 // product card
 .products {
     .products-container {
+        //border: 2px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         .product-card {
+            //border: 2px solid red;
+
             border-radius: 10px;
             background-color: #dde6c0;
-            // width: 200px;
-            // height: 300px;
+            display: flex;
+            flex-direction: column;
             .icons {
                 display: flex;
                 justify-content: flex-end;
@@ -130,7 +136,7 @@ nav {
                 padding: 0.5rem;
                 gap: 1rem;
                 h5 {
-        
+                    
                 }
         
                 .product-desc {
@@ -213,13 +219,14 @@ nav {
         
         .products-container {
             //border: 2px solid red;
-            display: grid;
-            grid-template-rows: repeat(3, 300px);
-            grid-template-columns: repeat(2, 200px);
-            gap: 1.2rem;
+            //padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
             // Product card
             .product-card {
                 //border: 2px solid blue;
+                width: 200px;
                 .icons {
                     i {
 
@@ -376,9 +383,16 @@ nav {
 
 }
 
-.garlic-powder, .agushi, .chili, .ginger-powder, .curry-powder, .kebab-powder, .paprika {
+.garlic-powder, .agushi, .chili, .ginger-powder, .curry-powder, 
+.kebab-powder, .paprika, .kooko, .millet, .brown-rice, 
+.guinea-corn, .chili, .dawadawa, .black-pepper {
     height: 130px;
 }
+
+.cinammon-powder {
+    height: 130px;
+}
+
 
 .date-syrup {
     height: 150px;
