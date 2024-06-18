@@ -22,8 +22,6 @@ learnMoreBtns.forEach(learnMoreBtn => {
     
 })
 
-let favorites = []
-
 
 // toggle red heart
 hearts.forEach(heart => {
@@ -46,44 +44,51 @@ hearts.forEach(heart => {
     })
 })
 
-// populate basket/bag with items that have the bag color to be black
 
-function displayBag() {
-    alert("bag is shown")
-}
 
 
 // toggle cart item
 bags.forEach(bag => {
     bag.addEventListener('click', function() {
-        console.log()
-        if (bag.style.color != 'black') {
-            bag.style.color = 'black'
+        
+        if (bag.style.color === 'black') {
+            bag.style.color = '#898E4C'
             setTimeout(() => {
-                alert("Added to bag! ")
-                displayBag()
+                alert("Item added to bag")
             }, 100)
             
         } else {
-            bag.style.color = 'white'
+            bag.style.color = 'black'
             setTimeout(() => {
-                alert("Removed from bag")
+                alert("Item removed from bag")
             }, 100)
         }
     })
 })
 
 
+// code from stack overflow user Mervis Mascarenhas
 // mobile options
-const selectElement = document.querySelector(".select-sorting")
+const selectElement = document.getElementsByName('drop_select')[0];
 
-const spices = document.querySelector(".spices")
-let milletAndPorridges = document.querySelectorAll(".millet")
+let spices = document.querySelectorAll(".spice")
+let milletAndPorridges = document.querySelectorAll(".Millet")
 let healthSupplements = document.querySelectorAll(".health")
 
-selectElement.addEventListener('change', function(event) {
-    const selected = event.target.value
-    if (selected === spices.textContent) {
-        console.log("spices selected")
-    }
-})
+
+// selectElement.addEventListener('change', function(event) {
+//     const selectedValue = event.target.value
+//     if (selectedValue === 'sort-by-spices') {
+//         // display spices
+//     }
+
+//     if (selectedValue === 'sort-by-millet') {
+//         // display spices
+//         console.log(milletAndPorridges)
+//         // milletAndPorridges.forEach(millet => {
+//         //     console.log(millet)
+//         // })
+//     }
+
+
+// })
