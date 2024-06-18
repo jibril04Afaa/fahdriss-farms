@@ -46,13 +46,12 @@ hearts.forEach(heart => {
     })
 })
 
-
-// let shoppingBag = document.querySelector("")
-
 // populate basket/bag with items that have the bag color to be black
-function displayBag() {
 
+function displayBag() {
+    alert("bag is shown")
 }
+
 
 // toggle cart item
 bags.forEach(bag => {
@@ -62,73 +61,29 @@ bags.forEach(bag => {
             bag.style.color = 'black'
             setTimeout(() => {
                 alert("Added to bag! ")
-                
+                displayBag()
             }, 100)
             
         } else {
             bag.style.color = 'white'
             setTimeout(() => {
-                alert("Removed to bag")
+                alert("Removed from bag")
             }, 100)
         }
     })
 })
 
 
+// mobile options
+const selectElement = document.querySelector(".select-sorting")
 
-// list titles
-let spices = document.querySelector(".spices")
-let milletAndPorridges = document.querySelector(".millet")
-let healthSupplements = document.querySelector(".health")
+const spices = document.querySelector(".spices")
+let milletAndPorridges = document.querySelectorAll(".millet")
+let healthSupplements = document.querySelectorAll(".health")
 
-let productsContainer = document.querySelector(".products-container")
-let spiceProducts = document.querySelectorAll(".spice")
-let milletProducts = document.querySelectorAll(".Millet")
-let health = document.querySelectorAll(".health")
-
-// let HTMLspices = []
-// let HTMLmillets = []
-// let HTMLhealths = []
-
-
-spices.addEventListener('click', function() {
-    // show all items with the class of 'spices'
-
-    // empty products container
-    productsContainer.textContent = ''
-    
-    spiceProducts.forEach(spiceProduct => {
-        productsContainer.textContent = spiceProduct.textContent
-    })
-
-    
+selectElement.addEventListener('change', function(event) {
+    const selected = event.target.value
+    if (selected === spices.textContent) {
+        console.log("spices selected")
+    }
 })
-
-// millet.addEventListener('click', function() {
-//     // show all items with the class of 'millet'
-// })
-
-// health.addEventListener('click', function() {
-//     // show all items with the class of 'health'
-//     let healthItems = document.querySelectorAll('.health')
-//     healthItems.forEach(healthItem => {
-//         // show each health item
-//     })
-// })
-
-
-
-
-// sorting
-let sortByPrice = document.querySelector()
-let sortByPopularity = document.querySelector()
-let sortByHealthiest = document.querySelector()
-
-
-
-
-
-// sortByPrice.addEventListener('click', function() {
-//     // sort products by price
-
-// })

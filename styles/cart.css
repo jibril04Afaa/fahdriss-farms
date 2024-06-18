@@ -44,17 +44,73 @@ button li, i {
 }
 @media (min-width: 320px) {
   .container {
-    border: 2px solid red;
     display: flex;
     flex-direction: column;
     padding: 1rem;
   }
+  .container .basket {
+    margin-top: 2rem;
+  }
+  .container .basket h2 {
+    text-align: center;
+  }
   .container .basket .basket-container {
+    margin-top: 1.3rem;
     border: 2px solid #898E4C;
     border-radius: 5px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 300px;
+  }
+  .container .basket .basket-container .quantity .quantity-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .container .basket .basket-container .quantity .quantity-details .reduce, .container .basket .basket-container .quantity .quantity-details .increase {
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    border: 0;
+    color: #898E4C;
+  }
+  .container .total {
+    margin-top: 2rem;
+  }
+  .container .total h2 {
+    text-align: center;
+  }
+  .container .total .total-container {
+    margin-top: 1.3rem;
+    border: 2px solid #898E4C;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .container .total .total-container .before-total .subtotal {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container .total .total-container .before-total .shipping-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container .total .total-container .final-total {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container .total .total-container .checkout-container {
+    padding: 1rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
+  }
+  .container .total .total-container .checkout-container .checkout-btn {
+    width: 300px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #898E4C;
+    padding: 0.25rem;
   }
 }/*# sourceMappingURL=cart.css.map */

@@ -24,8 +24,8 @@ a {
 }
 
 
-button, i {
-    cursor: pointer;
+button {
+
     font-weight: bold;
     border-radius: 5px;
     border: 0;
@@ -33,13 +33,8 @@ button, i {
     background-color: #dde6c0;
 }
 
-
-.toast-class {
-    background-color: white;
-    color: #898E4C;
-    display: block;
-    height: 200px;
-    width: 600px;
+i {
+    cursor: pointer;
 }
 
 // mixins
@@ -172,7 +167,6 @@ nav {
 // mobile screens
 @media (min-width: 320px) {
     nav {
-        display: none;
         .logo {
         }
         ul {
@@ -185,7 +179,8 @@ nav {
         }
     
         .nav-buttons {
-    
+            display: flex;
+            justify-content: space-around;
         }
     }
     
@@ -194,10 +189,8 @@ nav {
     }
 
     .categories {
+        display: none;
         ul {
-            display: flex;
-            justify-content: space-around;
-            margin: 2.5rem;
             li {
 
             }
@@ -205,10 +198,12 @@ nav {
     }
 
     .sorting {
-        //border: 2px solid red;
         display: flex;
         justify-content: flex-end;
+
+        //border: 2px solid red;
         select {
+            margin: 2rem;
             font-size: 1.2rem;
             option {
                 
@@ -285,7 +280,7 @@ nav {
 }
 
 // Tablets 
-@media (width >= 768px) {
+@media (min-width : 768px) {
     nav {
         display: flex;
         justify-content: space-between;
@@ -321,8 +316,11 @@ nav {
     }
 
     .categories {
+        display: flex;
         ul {
-
+            display: flex;
+            justify-content: space-around;
+            border: 2px solid red;
             li {
                 font-size: 1.5rem;
             }
@@ -330,6 +328,7 @@ nav {
     }
 
     .sorting {
+        display: none;
 
         select {
 

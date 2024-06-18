@@ -21,8 +21,7 @@ a {
   color: inherit;
 }
 
-button, i {
-  cursor: pointer;
+button {
   font-weight: bold;
   border-radius: 5px;
   border: 0;
@@ -30,12 +29,8 @@ button, i {
   background-color: #dde6c0;
 }
 
-.toast-class {
-  background-color: white;
-  color: #898E4C;
-  display: block;
-  height: 200px;
-  width: 600px;
+i {
+  cursor: pointer;
 }
 
 nav {
@@ -103,26 +98,26 @@ nav .nav-buttons ul li {
   gap: 1rem;
 }
 @media (min-width: 320px) {
-  nav {
-    display: none;
-  }
   nav ul {
     display: flex;
     justify-content: center;
   }
+  nav .nav-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
   .title {
     margin-top: 3rem;
   }
-  .categories ul {
-    display: flex;
-    justify-content: space-around;
-    margin: 2.5rem;
+  .categories {
+    display: none;
   }
   .sorting {
     display: flex;
     justify-content: flex-end;
   }
   .sorting select {
+    margin: 2rem;
     font-size: 1.2rem;
   }
   .products .products-container {
@@ -142,7 +137,7 @@ nav .nav-buttons ul li {
     font-size: 2rem;
   }
 }
-@media (width >= 768px) {
+@media (min-width: 768px) {
   nav {
     display: flex;
     justify-content: space-between;
@@ -159,8 +154,19 @@ nav .nav-buttons ul li {
   .title {
     margin-top: 3rem;
   }
+  .categories {
+    display: flex;
+  }
+  .categories ul {
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid red;
+  }
   .categories ul li {
     font-size: 1.5rem;
+  }
+  .sorting {
+    display: none;
   }
   main .main-container .products .products-container {
     margin-top: 2rem;

@@ -1,6 +1,6 @@
 
 let hearts = document.querySelectorAll(".fa-heart")
-let bag = document.querySelector(".fa-bag-shopping")
+let bags = document.querySelector(".fa-bag-shopping")
 let whatsappBtn = document.querySelector(".fa-whatsapp")
 
 const addToFavorites = () => {
@@ -10,8 +10,44 @@ const addToFavorites = () => {
     
 }
 
+// toggle red heart
 hearts.forEach(heart => {
-    heart.addEventListener('click', addToFavorites)
+    heart.addEventListener('click', function() {
+        if (heart.style.color === '') {
+            heart.style.color = 'red'
+            setTimeout(() => {
+                alert("Added to favorites! ")
+            }, 100)
+            
+            // add selected item to favorites
+
+        } else {
+            heart.style.color = ''
+            setTimeout(() => {
+                alert("Removed from favorites ")
+            }, 100)
+            // remove selected item from favorites
+        }
+    })
+})
+
+// toggle cart item
+bags.forEach(bag => {
+    bag.addEventListener('click', function() {
+        if (bag.style.color === 'white') {
+            bag.style.color = 'black'
+            setTimeout(() => {
+                alert("Added to bag! ")
+                
+            }, 100)
+            
+        } else {
+            bag.style.color = 'white'
+            setTimeout(() => {
+                alert("Removed from bag")
+            }, 100)
+        }
+    })
 })
 
 // Toggle burger menu

@@ -7,6 +7,10 @@
   font-style: normal;
 }
 
+.fa-bag-shopping {
+  color: white;
+}
+
 /*
 .main {
 
@@ -151,15 +155,6 @@ button, li, i {
   color: white;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 1;
-  width: 100%;
-}
 nav ul {
   display: flex;
   justify-content: center;
@@ -186,16 +181,11 @@ nav ul li {
   text-align: center;
   color: #fff;
   font-size: 20px;
-  border: 2px solid gold;
   border-radius: 10px;
-  background: gold;
   cursor: pointer;
 }
 .main .main-container .hero .hero-container .hero-left a button:hover {
-  filter: contrast(1.1);
-}
-.main .main-container .hero .hero-container .hero-left a button:active {
-  filter: contrast(0.9);
+  opacity: 0.8;
 }
 .main .main-container .hero .hero-container .hero-left a button::before, .main .main-container .hero .hero-container .hero-left a button::after {
   content: "";
@@ -250,57 +240,32 @@ nav ul li {
   display: flex;
   flex-direction: column;
 }
+footer p {
+  color: ghostwhite;
+}
+footer .social-media-links ul {
+  color: ghostwhite;
+}
+
 .contact-us .contact-us-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .contact-us .contact-us-container h2, .contact-us .contact-us-container h3 {
+  text-align: center;
   color: #898E4C;
 }
-.contact-us .contact-us-container .map {
-  position: relative;
-  margin: auto;
-  text-align: center;
-  color: #fff;
-  font-size: 20px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.contact-us .contact-us-container .map:hover {
-  filter: contrast(1.1);
-}
-.contact-us .contact-us-container .map:active {
-  filter: contrast(0.9);
-}
-.contact-us .contact-us-container .map::before, .contact-us .contact-us-container .map::after {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  border: 2px solid #898E4C;
-  transition: all 0.5s;
-  animation: clippath 3s infinite linear;
-  border-radius: 10px;
-}
-.contact-us .contact-us-container .map::after {
-  animation: clippath 3s infinite -1.5s linear;
-}
-.contact-us .contact-us-container .map iframe {
+.contact-us .contact-us-container iframe {
   border: 0;
   border-radius: 10px;
+  filter: drop-shadow(0 0 0.75rem #d2d3b9);
 }
 
 @media (min-width: 320px) {
   nav {
-    background-color: #fffffa;
-    overflow: hidden;
-    position: relative;
-  }
-  nav ul {
     display: none;
+    background-color: #fffffa;
   }
   nav ul a {
     padding: 1rem;
@@ -455,6 +420,9 @@ nav ul li {
   .contact-us .contact-us-container h2, .contact-us .contact-us-container h3 {
     color: #898E4C;
   }
+  .contact-us .contact-us-container h3 {
+    font-size: 1rem;
+  }
   .contact-us .contact-us-container .map iframe {
     border: 0;
   }
@@ -474,6 +442,9 @@ nav ul li {
   .contact-us .contact-us-container .map iframe {
     width: 700px;
     height: 300px;
+  }
+  .about-text {
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 1024px) {
@@ -497,14 +468,18 @@ nav ul li {
 @media (min-width: 768px) {
   nav {
     display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 100%;
   }
   nav ul {
     gap: 1rem;
   }
   nav .nav-buttons {
-    display: flex;
-    justify-content: space-around;
-    padding: 0.5rem;
+    border: 2px solid red;
   }
   nav .nav-buttons i {
     color: #898E4C;
@@ -556,6 +531,15 @@ nav ul li {
   }
 }
 @media (min-width: 1024px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 100%;
+  }
   .main .main-container .hero .hero-container .hero-right img {
     width: 350px;
     height: 350px;
@@ -600,6 +584,15 @@ nav ul li {
   }
 }
 @media (min-width: 1440px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 100%;
+  }
   .main .main-container .hero .hero-container .hero-right img {
     width: 350px;
     height: 350px;

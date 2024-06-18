@@ -143,17 +143,19 @@ h2 {
 // mobile screens
 @media (min-width: 320px) {
     .container {
-        border: 2px solid red;
+        //border: 2px solid red;
         display: flex;
         flex-direction: column;
         padding: 1rem;
         //align-items: flex-start;
         .basket {
+            margin-top: 2rem;
             //border: 2px solid red;
             h2 {
-    
+                text-align: center;
             }
             .basket-container {
+                margin-top: 1.3rem;
                 border: 2px solid #898E4C;
                 border-radius: 5px;
                 display: flex;
@@ -176,11 +178,17 @@ h2 {
                 }
     
                 .quantity {
-                    h5 {
-                        
-                    }
-                    .product-quantity {
-    
+                    .quantity-details {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        .reduce, .increase {
+                            cursor: pointer;
+                            font-size: 1.2rem;
+                            padding: .2rem;
+                            border: 0;
+                            color: #898E4C;
+                        } 
                     }
                 }
     
@@ -197,38 +205,59 @@ h2 {
         }
     
         .total {
+            margin-top: 2rem;
             h2 {
-    
+                text-align: center;
             }
             .total-container {
+                margin-top: 1.3rem;
+                border: 2px solid #898E4C;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
                 .before-total {
+                    
                     h5 {
     
                     }
                     .subtotal {
-    
+                        display: flex;
+                        justify-content: space-between;
                     }
     
                     .shipping-container {
+                        display: flex;
+                        justify-content: space-between;
                         h5 {
                             
                         }
                         .shipping {
-    
+
                         }
                     }
                 }
                 .final-total {
+                    display: flex;
+                    justify-content: space-between;
                     h5 {
-    
+                        
                     }
                     .total {
-    
+                        
                     }
                 }
                 .checkout-container {
+                    
+                    padding: 1rem 0 2rem 0;
+                    display: flex;
+                    justify-content: center;
                     .checkout-btn {
-                        
+                        width: 300px;
+                        border: 0;
+                        border-radius: 5px;
+                        background-color: #898E4C;
+                        padding: .25rem;
                     }
                 }
             }

@@ -7,6 +7,9 @@
     font-style: normal;
 }
 
+.fa-bag-shopping {
+    color: white;
+}
 
 // empty ".main" class code
 /*
@@ -171,13 +174,7 @@ button, li, i {
 
 // default styles
 nav {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-    width: 100%;
+
     .logo {
 
     }
@@ -244,18 +241,13 @@ nav {
                             text-align: center;
                             color: #fff;
                             font-size: 20px;
-                            border: 2px solid gold;
                             border-radius: 10px;
-                            background: gold;
                             cursor: pointer;
                             
                             &:hover {
-                                filter: contrast(1.1);
+                                opacity: .8;
                             }
                             
-                            &:active {
-                                filter: contrast(0.9);
-                            }
                             
                             &::before,
                             &::after {
@@ -321,6 +313,7 @@ nav {
             }
 
             .about-text {
+                
                 p {
 
                 }
@@ -379,11 +372,11 @@ nav {
     footer {
         
         p {
-
+            color: ghostwhite;
         }
         .social-media-links {
             ul {
-
+                color: ghostwhite;
             }
         }
     }
@@ -397,66 +390,37 @@ nav {
         flex-direction: column;
         align-items: center;
         h2, h3 {
+            text-align: center;
             color: #898E4C;
         }
         h3 {}
 
         .map {
-            position: relative;
-            margin: auto;
-            text-align: center;
-            color: #fff;
-            font-size: 20px;
-            border-radius: 10px;
-            cursor: pointer;
             
-            &:hover {
-                filter: contrast(1.1);
-            }
-            
-            &:active {
-                filter: contrast(0.9);
-            }
-            
-            &::before,
-            &::after {
-            content: "";
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            border: 2px solid #898E4C;
-            transition: all .5s;
-            animation: clippath 3s infinite linear;
-            border-radius: 10px;
-        }
-        
-        &::after {
-            animation: clippath 3s infinite -1.5s linear;
         }
             iframe {
                 border: 0;
                 border-radius: 10px;
-                
+                filter: drop-shadow(0 0 0.75rem #d2d3b9);
+                // filter: drop-shadow(10px, 10px, 4px, );
             }
         }
     }
-}
 
 // Media Queries
 
 // mobile screens
 @media (min-width : 320px) {
     nav {
+        display: none;
         background-color: #fffffa;
-        overflow: hidden;
-        position: relative;
+        //overflow: hidden;
+        //position: relative;
         .logo {
 
         }
         ul {
-            display: none;
+            //display: none;
             a {
                 padding: 1rem;
                 display: block;
@@ -713,9 +677,12 @@ nav {
             align-items: center; 
             gap: 1rem;
             h2, h3 {
+                
                 color: #898E4C;
             }
-            h3 {}
+            h3 {
+                font-size: 1rem;
+            }
 
             .map {
                 iframe {
@@ -803,6 +770,10 @@ nav {
             }
         }
     }
+
+    .about-text {
+        font-size: 1.5rem;
+    }
 }
 
 // contact us (laptops)
@@ -862,7 +833,14 @@ nav {
 // Tablets 
 @media (min-width : 768px) {
     nav {
+        //border: 2px solid red;
         display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        width: 100%;
         .logo {
 
         }
@@ -878,10 +856,7 @@ nav {
         }
 
         .nav-buttons {
-            //border: 2px solid green;
-            display: flex;
-            justify-content: space-around;
-            padding: 0.5rem;
+            border: 2px solid red;
             i { 
                 color: #898E4C;
             }
@@ -1020,6 +995,16 @@ nav {
 
 // Laptops 
 @media (min-width : 1024px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        width: 100%;
+        
+    }
     .main {
         
         
@@ -1148,6 +1133,15 @@ nav {
 
 // Large laptops
 @media (min-width: 1440px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        width: 100%;
+    }
     .main {
         
         
