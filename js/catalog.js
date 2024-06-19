@@ -67,23 +67,71 @@ bags.forEach(bag => {
 })
 
 
+let productCardParent = document.querySelector(".products-container")
+let OGProductCard = document.querySelector(".product-card")
+
 // fetch JSON data to populate product cards
-async function fetchJSON() {
-    const response = await fetch("products.json")
-    const parsedData = await response.json()
+async function fetchJSONandPopulate() {
+    try {
+        const response = await fetch("products.json")
+        const parsedData = await response.json()
+        
+        parsedData.forEach(data => {
+            let IDs = data.id
+            // let productName = data.name
+            // let prices = data.prices
+            // let images = data.image
+            // let categories = data.category
+            // let widths = data.width
+            // let heights = data.height
 
-    for (data in parsedData) {
-        let object = parsedData[data]
-        for (let objectifiedData in object) {
-            let eachProduct = object[objectifiedData]
-            console.log(eachProduct)
-        }
+            // create new product card
+            let productCard = document.createElement('div')
+
+            let icons = document.createElement('div')
+            let productImage = document.createElement('div')
+            let productInfo = document.createElement('div')
+
+            // dynamically populate data to the product cards
+            productCard.innerHTML = 
+            `
+            <div class="product-card" class="${data.category}">
+
+            <div class="icons">
+                <!-- heart icon-->
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                <!-- shopping bag-->
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+
+            <div class="product-image">
+                <img src = "${data.image}" width = "${data.width}" height = "${data.height}">
+            </div>
+
+            <div class="product-info">
+                <h5 class="price">${data.prices}</h5>
+                <h5 class="product-name">${data.name}</h5>
+            </div>
+        </div>
+
+            `
+
+
+            // add product card styling
+            productCard.classList.add("product-card")
+
+            // give product card a parent
+            productCardParent.appendChild(productCard)
+            
+        })
+
+    } catch (error) {
+        console.error(error)
     }
-
 
 }
 
-fetchJSON()
+fetchJSONandPopulate()
 
 
 // code from stack overflow user Mervis Mascarenhas
