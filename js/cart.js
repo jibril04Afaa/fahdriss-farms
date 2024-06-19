@@ -23,7 +23,7 @@ increaseQty.addEventListener('click', () => {
 })
 
 // from catalog.html
-let bags = document.querySelectorAll(".fa-bag-shopping")
+//let bags = document.querySelectorAll(".fa-bag-shopping")
 
 // parent is basket div from cart.html
 let cartProductParent = document.querySelector(".basket")

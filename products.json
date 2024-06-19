@@ -1,0 +1,137 @@
+[
+    {
+        "id": 1,
+        "name": "DATE SYRUP",
+        "prices": ["12 GHS / 1pc"],
+        "image": "img/date-syrup.png",
+        "category": "health",
+        "width": "150px",
+        "height": "150px"
+    }, 
+
+    {
+        "id": 2,
+        "name": "KEBAB POWDER",
+        "prices": ["35 GHS / 1pc", "29GHS / 12pcs"],
+        "image": "img/kebab-powder.png",
+        "category": "spice",
+        "height": "130px"
+    }, 
+
+    {
+        "id": 3,
+        "name": "GINGER POWDER",
+        "prices": ["14 GHS / 1pc", "11GHS / 12pcs"],
+        "image": "img/ginger-powder.png",
+        "category": "spice",
+        "height": "130px"
+    }, 
+
+    {
+        "id": 4,
+        "name": "CINNAMON POWDER",
+        "prices": ["23 GHS / 1pc", "216GHS / 12pcs"],
+        "image": "img/cinammon-powder.png",
+        "category": "health",   
+        "height": "130px"
+    }, 
+
+    {
+        "id": 5,
+        "name": "CURRY POWDER",
+        "prices": ["19 GHS / 1pc", "180GHS / 12pcs"],
+        "image": "img/curry-powder.png",
+        "category": "health",
+        "height": "130px"
+    }, 
+
+    {
+        "id": 6,
+        "name": "AGUSHIE POWDER",
+        "prices": ["32 GHS / 1pc", "300GHS / 12pcs"],
+        "image": "img/agushi.png",
+        "category": "N/A",
+        "height": "130px"
+    }, 
+
+    {
+        "id": 7,
+        "name": "BLACK PEPPER",
+        "prices": ["24 GHS / 1pc", "240 GHS / 12pcs"],
+        "image": "img/black-pepper.png",
+        "category": "spice",
+        "height": "130px"
+    }, 
+
+    {
+        "id": 8,
+        "name": "DAWADAWA",
+        "prices": ["17 GHS / 1pc", "168 GHS / 12pcs"],
+        "image": "img/dawadawa.png",
+        "category": "health",
+        "height": "130px"
+    }, 
+
+    {
+        "id": 9,
+        "name": "GARLIC POWDER",
+        "prices": ["18 GHS / 1pc", "160 GHS / 12pcs"],
+        "image": "img/garlic-powder.png",
+        "category": "spice",
+        "height": "130px"
+    }, 
+
+    {
+        "id": 10,
+        "name": "CHILI POWDER/FLAKES",
+        "prices": ["15 GHS / 1pc", "205 GHS / 12pcs"],
+        "image": "img/chili-flakes.png",
+        "category": "spice",
+        "height": "130px"
+    }, 
+
+    {
+        "id": 11,
+        "name": "GUINEA CORN MIX",
+        "prices": ["17 GHS / 1pc", "200 GHS / 12pcs"],
+        "image": "img/guinea-corn.png",
+        "category": "millet and porridge",
+        "height": "130px"
+    }, 
+
+    {
+        "id": 12,
+        "name": "BROWN RICE MIX",
+        "prices": ["17 GHS / 1pc", "200 GHS / 12pcs"],
+        "image": "img/brown-rice-mix.png",
+        "category": "millet and porridge",
+        "height": "130px"
+    }, 
+
+    {
+        "id": 13,
+        "name": "MILLET MIX",
+        "prices": ["17 GHS / 1pc", "200 GHS / 12pcs"],
+        "image": "img/millet-mix.png",
+        "category": "millet and porridge",
+        "height": "130px"
+    }, 
+
+    {
+        "id": 14,
+        "name": "HAUSA KOOKO",
+        "prices": ["17 GHS / 1pc", "200 GHS / 12pcs"],
+        "image": "img/kooko.png",
+        "category": "millet and porridge",
+        "height": "130px"
+    }, 
+
+    {
+        "id": 15,
+        "name": "PAPRIKA",
+        "prices": ["25 GHS / 1pc", "252 GHS / 12pcs"],
+        "image": "img/paprika.png",
+        "category": "spice",
+        "height": "130px"
+    }
+]

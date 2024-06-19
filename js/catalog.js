@@ -67,13 +67,32 @@ bags.forEach(bag => {
 })
 
 
+// fetch JSON data to populate product cards
+async function fetchJSON() {
+    const response = await fetch("products.json")
+    const parsedData = await response.json()
+
+    for (data in parsedData) {
+        let object = parsedData[data]
+        for (let objectifiedData in object) {
+            let eachProduct = object[objectifiedData]
+            console.log(eachProduct)
+        }
+    }
+
+
+}
+
+fetchJSON()
+
+
 // code from stack overflow user Mervis Mascarenhas
 // mobile options
-const selectElement = document.getElementsByName('drop_select')[0];
+// const selectElement = document.getElementsByName('drop_select')[0];
 
-let spices = document.querySelectorAll(".spice")
-let milletAndPorridges = document.querySelectorAll(".Millet")
-let healthSupplements = document.querySelectorAll(".health")
+// let spices = document.querySelectorAll(".spice")
+// let milletAndPorridges = document.querySelectorAll(".Millet")
+// let healthSupplements = document.querySelectorAll(".health")
 
 
 // selectElement.addEventListener('change', function(event) {
