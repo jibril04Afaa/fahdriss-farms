@@ -64,24 +64,25 @@ async function fetchJSONandPopulate() {
 fetchJSONandPopulate()
 
 // toggle red heart
-// productCardParent.addEventListener('click', function(event) {
-//     let heart = event.target
-//     if (heart.style.color != 'red') {
-//         heart.style.color = 'red'
-//     } else {
-//         heart.style.color = 'black'
-//     }
-// })
-
+hearts.forEach(heart => {
+    heart.addEventListener('click', function() {
+        if (heart.style.color != 'red') {
+            heart.style.color = 'red'
+        } else {
+            heart.style.color = 'black'
+        }
+        
+    })
+})
 
 // toggle cart item
-productCardParent.addEventListener('click', function(event) {
-    if (event.target.style.color != '#898E4C') {
-        event.target.style.color = '#898E4C'
-    } else {
-        event.target.style.color = 'black'
-    }
-})
+// productCardParent.addEventListener('click', function(event) {
+//     if (event.target.style.color != '#898E4C') {
+//         event.target.style.color = '#898E4C'
+//     } else {
+//         event.target.style.color = 'black'
+//     }
+// })
 
 
 // code from stack overflow user Mervis Mascarenhas
