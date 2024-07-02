@@ -1,7 +1,11 @@
 const express = require("express")
 const mongoose = require("mongoose")
+const cors = require("cors")
+
 const app = express()
 
+// use cors middleware
+app.use(cors())
 
 // database connection
 mongoose
@@ -14,10 +18,13 @@ mongoose
     .catch((error) => console.log(error))
 
 
+// test endpoint
 app.get('/', (req, res) => {
     console.log("Hello World")
     res.send("Working ")
 })
+
+
 
 // mongoose schema
 const Schema = mongoose.Schema
@@ -34,7 +41,7 @@ const productSchema = new Schema({
 // mongoose model
 const Product = mongoose.model('Product', productSchema)
 
-// fetch products
+// product endpoint
 app.get('/products', async (req, res) => {
     try {
         const products = await Product.find()
@@ -44,3 +51,5 @@ app.get('/products', async (req, res) => {
         res.status(500).json({errorMessage: "Error fetching products"})
     }
 })
+
+

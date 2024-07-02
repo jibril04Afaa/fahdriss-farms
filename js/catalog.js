@@ -11,12 +11,19 @@ let bags = document.querySelectorAll(".fa-bag-shopping")
 let productCardParent = document.querySelector(".products-container")
 let OGProductCard = document.querySelector(".product-card")
 
-// fetch JSON data to populate product cards
-async function fetchJSONandPopulate() {
+// TODO: Change function to fetch from MongoDB database
+const API_URL = "http://localhost:3000/products"
+
+
+async function fetchfromDB() {
     try {
-        const response = await fetch("products.json")
+        const response = await fetch(API_URL)
         const parsedData = await response.json()
         
+        if (!response.ok) {
+            console.log("BIG ASS ERROR!!")
+        }
+
         parsedData.forEach(data => {
             // create new product card
             let productCard = document.createElement('div')
@@ -61,9 +68,13 @@ async function fetchJSONandPopulate() {
 
 }
 
-fetchJSONandPopulate()
+fetchfromDB()
 
 // toggle red heart
+
+
+
+
 hearts.forEach(heart => {
     heart.addEventListener('click', function() {
         if (heart.style.color != 'red') {
