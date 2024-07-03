@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    //overflow-x: hidden;
+    background-color: #eeefe2;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+// mixins
+@mixin divCentered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .email-container {
+        h3 {
+
+        }
+        .email-field {
+
+        }
+    }
+
+    .password-container {
+        h3 {
+
+        }
+        .password-field {
+    
+        }
+    }
+
+    .buttons-container {
+        .login-container {
+            .login-btn {
+
+            }
+        }
+
+        .create-account-container {
+            .create-account-btn {
+                
+            }
+        }
+    }
+
+}
+
+
+
+// Media Queries
+
+// mobile screens
+@media (min-width: 320px) {
+    .container {
+        margin-top: 3rem;
+        .email-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: .5rem;
+            //border: 2px solid red;
+            h3 {
+
+            }
+            .email-field {
+                //border: 2px solid red;
+                width: 80%;
+                border-radius: 5px;
+                border: 0;
+                //margin-top: 1rem;
+            }
+        }
+    
+        .password-container {
+            
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: .5rem;
+            h3 {
+
+            }
+            .password-field {
+                //border: 2px solid red;
+                width: 80%;
+                border-radius: 5px;
+                border: 0;
+                //margin-top: 1rem;
+            }
+        }
+    
+        .buttons-container {
+            width: 100%;
+            //border: 2px solid red;
+            padding: 1rem;
+            margin-top: 1rem;
+            .login-container {
+                //width: 100%;
+                //border: 2px solid red;
+                
+                padding: .1rem;
+                .login-btn {
+                    background-color: #dde6c0;
+                    border: 0;
+                    border-radius: 10px;
+                    width: 100%;
+                    padding: .25rem;
+                }
+            }
+    
+            .create-account-container {
+                width: 100%;
+                padding: .1rem;
+                .create-account-btn {
+                    background-color: #dde6c0;
+                    border: 0;
+                    border-radius: 10px;
+                    width: 100%;
+                    padding: .25rem;
+                }
+            }
+        }
+    
+    }
+}
+
+// Tablets 
+@media (width >= 768px) {
+    .container {
+        margin-top: 4rem;
+        .email-container {
+            h3 {
+                .email-field {
+    
+                }
+            }
+        }
+    
+        .password-container {
+            h3 {
+                .password-field {
+        
+                }
+            }
+        }
+    
+        .buttons-container {
+            margin-top: 2rem;
+            .login-container {
+                .login-btn {
+    
+                }
+            }
+    
+            .create-account-container {
+                .create-account-btn {
+                    
+                }
+            }
+        }
+    
+    }
+}
+
+// Laptops 
+@media (width >= 1024px) {
+    .container {
+        // margin-top: 4rem;
+        .email-container {
+            h3 {
+                .email-field {
+    
+                }
+            }
+        }
+    
+        .password-container {
+            h3 {
+                .password-field {
+        
+                }
+            }
+        }
+    
+        .buttons-container {
+            .login-container {
+                .login-btn {
+    
+                }
+            }
+    
+            .create-account-container {
+                .create-account-btn {
+                    
+                }
+            }
+        }
+    
+    }
+}
+
+// Large laptops
+@media (width >= 1440px) {
+    .container {
+        margin-top: 5rem;
+        .email-container {
+            h3 {
+                .email-field {
+    
+                }
+            }
+        }
+    
+        .password-container {
+            h3 {
+                .password-field {
+        
+                }
+            }
+        }
+    
+        .buttons-container {
+            .login-container {
+                .login-btn {
+    
+                }
+            }
+    
+            .create-account-container {
+                .create-account-btn {
+                    
+                }
+            }
+        }
+    
+    }
+}

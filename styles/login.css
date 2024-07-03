@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #eeefe2;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 320px) {
+  .container {
+    margin-top: 3rem;
+  }
+  .container .email-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .container .email-container .email-field {
+    width: 80%;
+    border-radius: 5px;
+    border: 0;
+  }
+  .container .password-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  .container .password-container .password-field {
+    width: 80%;
+    border-radius: 5px;
+    border: 0;
+  }
+  .container .buttons-container {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  .container .buttons-container .login-container {
+    padding: 0.1rem;
+  }
+  .container .buttons-container .login-container .login-btn {
+    background-color: #dde6c0;
+    border: 0;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0.25rem;
+  }
+  .container .buttons-container .create-account-container {
+    width: 100%;
+    padding: 0.1rem;
+  }
+  .container .buttons-container .create-account-container .create-account-btn {
+    background-color: #dde6c0;
+    border: 0;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0.25rem;
+  }
+}
+@media (width >= 768px) {
+  .container {
+    margin-top: 4rem;
+  }
+  .container .buttons-container {
+    margin-top: 2rem;
+  }
+}
+@media (width >= 1440px) {
+  .container {
+    margin-top: 5rem;
+  }
+}/*# sourceMappingURL=login.css.map */

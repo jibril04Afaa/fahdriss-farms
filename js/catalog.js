@@ -11,17 +11,18 @@ let bags = document.querySelectorAll(".fa-bag-shopping")
 let productCardParent = document.querySelector(".products-container")
 let OGProductCard = document.querySelector(".product-card")
 
-// TODO: Change function to fetch from MongoDB database
-const API_URL = "http://localhost:3000/products"
+
+const API_PRODUCT_URL = "http://localhost:3000/products"
+const API_CART_URL = "http://localhost:3000/cart"
 
 
 async function fetchfromDB() {
     try {
-        const response = await fetch(API_URL)
+        const response = await fetch(API_PRODUCT_URL)
         const parsedData = await response.json()
         
         if (!response.ok) {
-            console.log("BIG ASS ERROR!!")
+            console.error(error)
         }
 
         parsedData.forEach(data => {
@@ -70,30 +71,57 @@ async function fetchfromDB() {
 
 fetchfromDB()
 
+
+async function addToCart() {
+    try {
+        const response = await fetch(API_CART_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ productName: "kebab powder" })
+            
+        })
+
+        if (!response.ok) {
+            console.log("ERROR!")
+        }
+        
+        const data = await response.json()
+        
+
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+
 // toggle red heart
 
 
-
-
-hearts.forEach(heart => {
-    heart.addEventListener('click', function() {
-        if (heart.style.color != 'red') {
-            heart.style.color = 'red'
-        } else {
-            heart.style.color = 'black'
-        }
+// hearts.forEach(heart => {
+//     heart.addEventListener('click', function() {
+//         if (heart.style.color != 'red') {
+//             heart.style.color = 'red'
+//         } else {
+//             heart.style.color = 'black'
+//         }
         
-    })
-})
+//     })
+// })
+
+
+
 
 // toggle cart item
-// productCardParent.addEventListener('click', function(event) {
-//     if (event.target.style.color != '#898E4C') {
-//         event.target.style.color = '#898E4C'
-//     } else {
-//         event.target.style.color = 'black'
-//     }
-// })
+productCardParent.addEventListener('click', function(event) {
+    if (event.target.style.color != '#898E4C') {
+        event.target.style.color = '#898E4C'
+        // addToCart()
+    } else {
+        event.target.style.color = 'black'
+    }
+})
 
 
 // code from stack overflow user Mervis Mascarenhas

@@ -31,6 +31,10 @@ button li, i {
   cursor: pointer;
 }
 
+h2 {
+  text-align: center;
+}
+
 .container {
   display: flex;
   flex-direction: column;
