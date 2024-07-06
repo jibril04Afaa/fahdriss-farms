@@ -33,7 +33,7 @@ async function fetchfromDB() {
             // dynamically populate data to the product cards
             productCard.innerHTML = 
             `
-            <div class="product-card" class="${data.category}">
+            <div class="product-card" class="${data.category}" id="${data.id}" onClick="addToCart(${data.id});">
 
             <div class="icons">
                 <!-- heart icon-->
@@ -72,14 +72,17 @@ async function fetchfromDB() {
 fetchfromDB()
 
 
-async function addToCart() {
+async function addToCart(id) {
+    console.log("Adding something to the cart..")
     try {
         const response = await fetch(API_CART_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ productName: "kebab powder" })
+            body: JSON.stringify({
+                "item": id
+            })
             
         })
 
@@ -88,12 +91,14 @@ async function addToCart() {
         }
         
         const data = await response.json()
-        
+        console.log(data)
 
     } catch (error) {
         console.error(error)
     }
 }
+
+
 
 
 // toggle red heart
@@ -114,10 +119,19 @@ async function addToCart() {
 
 
 // toggle cart item
+bags.forEach(bag => {
+    bag.addEventListener('click', function() {
+        alert("Workinf")
+    })
+})
+
 productCardParent.addEventListener('click', function(event) {
     if (event.target.style.color != '#898E4C') {
         event.target.style.color = '#898E4C'
-        // addToCart()
+      //  addToCart(productCardParent.id)
+       // console.log(productCardParent)
+     //   console.log(productCardParent.id)
+
     } else {
         event.target.style.color = 'black'
     }

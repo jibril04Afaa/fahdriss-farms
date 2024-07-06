@@ -50,8 +50,6 @@ app.get('/products', async (req, res) => {
 
 
 
-
-
 // cart schema
 const cartSchema = new Schema({
     id: Number,
@@ -64,12 +62,52 @@ const cartSchema = new Schema({
 // cart mongoose model
 const Cart = mongoose.model('Cart', cartSchema)
 
-// cart endpoint - GET request to fetch cart items
 
+// cart endpoint - GET request to fetch cart items
+app.get('/cart', async (req, res) => {
+    try {
+        const cartItems = await Cart.find()
+        res.json(cartItems)
+    } catch(err) {
+        console.error(err)
+        res.status(500).json({ errorMessage: "Error fetching cart items" })
+    }
+})
 
 
 // cart endpoint - POST
+app.post('/cart', async (req, res) => {
+    console.log("Adding to users cart in database")
+     try {
+      //  const cartItems = await Cart.find()
+      //   res.json(cartItems)
 
+      // Figure what is the actual item 1.
+
+      const cartItem = await Cart.findOne({
+        id: req.body.id
+      })
+
+      console.log("DEBUG FROM FETCH")
+      console.log(cartItem);
+
+      // Create an iterm in the cart that has the same values.
+
+      const newCartItem = new Cart({
+        cartItem // this just takes whatever we got in the query
+      });
+      
+      
+
+      // save to database
+      newCartItem.save();
+
+         
+     } catch(err) {
+        console.error(err)
+         res.status(500).json({ errorMessage: "Error fetching cart items" })
+    }
+})
 
 
 // customer details schema
