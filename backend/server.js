@@ -2,6 +2,7 @@ const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
 const bodyParser = require("body-parser")
+const path = require("node:path")
 
 const app = express()
 
@@ -78,8 +79,26 @@ app.get('/cart', async (req, res) => {
     }
 })
 
+// product endpoint - GET request to fetch product items by id
+app.get('/products/:id', async (req, res) => {
+    try {
+        const { id } = req.params
+        const cartItems = await Cart.find({ id: id })
+
+        if (!cartItems) {
+            return res.status(404).json({ errorMessage: "Cart items not found"})
+        }
+
+        res.json(cartItems)
+    } catch(err) {
+        console.error(err)
+        res.status(500).json({ errorMessage: "Error fetching cart items" })
+    }
+})
+
 
 // cart endpoint - POST
+// this request posts to the server through the /cart endpoint
 app.post('/cart', async (req, res) => {
     console.log("Adding to users cart in database")
      try {
@@ -88,26 +107,24 @@ app.post('/cart', async (req, res) => {
 
       // Figure what is the actual item 1.
 
-      const cartItem = await Cart.findOne({
-        id: req.body.id
-      })
+    //   const cartItem = await Cart.findOne({
+    //     id: req.body.id
+    //   })
 
-      console.log("DEBUG FROM FETCH")
-      console.log(cartItem);
+    //   console.log("DEBUG FROM FETCH")
+    //   console.log(cartItem)
 
       // Create an iterm in the cart that has the same values.
 
-      const newCartItem = new Cart({
-        id: req.body.id,
-        name: req.body.name,
-        prices: req.body.prices,
-        image: req.body.image,
-      });
-      
-      
+    //   const newCartItem = new Cart({
+    //     id: req.body.id,
+    //     name: req.body.name,
+    //     prices: req.body.prices,
+    //     image: req.body.image,
+    //   })
 
-      // save to database
-      newCartItem.save();
+    //   // save to database
+    //   await newCartItem.save()
 
          
      } catch(err) {
@@ -115,6 +132,8 @@ app.post('/cart', async (req, res) => {
          res.status(500).json({ errorMessage: "Error fetching cart items" })
     }
 })
+
+
 
 
 // customer details schema

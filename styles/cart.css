@@ -67,6 +67,9 @@ h2 {
     align-items: center;
     width: 300px;
   }
+  .container .basket .basket-container .product-image {
+    border: none;
+  }
   .container .basket .basket-container .quantity .quantity-details {
     display: flex;
     justify-content: space-around;

@@ -65,6 +65,7 @@ h2 {
             align-items: center;
             width: 300px;
             .product-image {
+                //border: 2px solid red;
                 img {
 
                 }
@@ -165,12 +166,14 @@ h2 {
                 align-items: center;
                 width: 300px;
                 .product-image {
+                    border: none;
                     img {
     
                     }
                 }
     
                 .name {
+                    
                     h5 {
     
                     }

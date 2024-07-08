@@ -4,6 +4,10 @@ let increaseQty = document.querySelector(".increase")
 let quantity = document.querySelector(".product-quantity")
 let basketContainer = document.querySelector(".basket")
 let totalsContainer = document.querySelector(".total")
+let clearCartbtn = document.querySelector(".clear-cart-btn")
+
+// parent
+let basket = document.querySelector(".basket")
 
 // if there are no products in basket, display "basket empty text"
 // if (basketContainer) {
@@ -12,69 +16,90 @@ let totalsContainer = document.querySelector(".total")
 //     totalsContainer.textContent = ''
 // }
 
-const API_URL = "http://localhost:3000/cart"
+const API_CART_URL = "http://localhost:3000/cart"
+const API_PRODUCT_URL = "http://localhost:3000/products"
 
-// sends GET request to backend 
-// async function addToCart() {
-//     try {
-//         const response = await fetch(API_URL)
-//         const data = response.json()
 
+async function fetchSelectedProduct() {
+    const productID = localStorage.getItem("selectedProductID")
+    console.log(productID)
+
+    try {
+        const response = await fetch(`${API_PRODUCT_URL}`)
         
+        if(!response.ok) {
+            console.error(error)
+        }
+
+        const parsedData = await response.json()
+        console.log(parsedData)
+
+        parsedData.forEach(selectedProduct => {
+        // dynamically update html in cart.html with selected product
+        // if (product is selected): render html code for selected product
+
+        let newAddedProduct = document.createElement('div')
+        newAddedProduct.innerHTML = 
+
+        `<div class="basket-container">
+            <div class="product-image">
+                <img src = ${selectedProduct.image} width = ${selectedProduct.width} height = ${selectedProduct.height}>
+            </div>
+        </div>
+
+        <div class="name">
+            <h5>Name</h5>
+            <h5 class="product-name">${selectedProduct.name}</h5>
+        </div>
         
-//     } catch (error) {
-//         console.error(error)
-//     }
-// }
+        <div class="quantity">
+            <h5 class="amount-quantity">Quantity</h5>
+            <div class="quantity-details">
+                <button class="reduce">-</button>
+                <h5 class="product-quantity">0</h5>
+                <button class="increase">+</button>
+            </div>
+        </div>
 
-// addToCart()
+        <div class="price">
+            <h5 class="amount-price">Price</h5>
+            <h5 class="product-price">${selectedProduct.prices}</h5>
+        </div>
 
-// async function fetchProducts() {
-//     try {
-//         const response = await fetch(API_URL)
-//         const cartProducts = response.json()
+        `
+        basket.appendChild(newAddedProduct)
+        newAddedProduct.classList.add("basket-container")
+        })
         
-//     } catch (error) {
-//         console.error(error)
-//     }
-// }
-
-// fetchProducts()
-
-// async function displayCustomerProducts() {
-//     try {
-        
-//     } catch (error) {
-//         console.error(error)
-//     }
-// }
-
-// async function removeItem() {
-//     try {
-//         const response = await fetch(API_URL, {
-//             method: 'DELETE'
-//         })
-//     } catch (error) {
-//         console.error(error)
-//     }
-// }
-
-let counter = 0
-reduceQty.addEventListener('click', () => {
-    counter -= 1
-    quantity.textContent = counter
-
-    // TODO: FIX COUNTER
-    if (counter < 1) {
-        alert("Cannot have less than 0 items in cart! ")
-        counter = 0
+    } catch (error) {
+        console.error(error)
     }
+}
+
+// get product id selected
+fetchSelectedProduct()
+
+clearCartbtn.addEventListener('click', function() {
+    basketContainer.textContent = ''
+
 })
 
-increaseQty.addEventListener('click', () => {
-    counter += 1
-    quantity.textContent = counter
-})
+// let counter = 0
+// reduceQty.addEventListener('click', () => {
+//     counter -= 1
+//     quantity.textContent = counter
+
+//     // TODO: FIX COUNTER
+//     if (counter < 1) {
+//         alert("Cannot have less than 0 items in cart! ")
+//         counter = 0
+//     }
+// })
+
+// increaseQty.addEventListener('click', () => {
+//     counter += 1
+//     quantity.textContent = counter
+// })
 
 // // parent is basket div from cart.html
 // let cartProductParent = document.querySelector(".basket")

@@ -15,12 +15,12 @@ let OGProductCard = document.querySelector(".product-card")
 const API_PRODUCT_URL = "http://localhost:3000/products"
 const API_CART_URL = "http://localhost:3000/cart"
 
-
+// fetch product data from database and populate catalog.html
 async function fetchfromDB() {
     try {
         const response = await fetch(API_PRODUCT_URL)
         const parsedData = await response.json()
-        
+
         if (!response.ok) {
             console.error(error)
         }
@@ -33,7 +33,8 @@ async function fetchfromDB() {
             // dynamically populate data to the product cards
             productCard.innerHTML = 
             `
-            <div class="product-card" class="${data.category}" id="${data.id}" onClick="addToCart(${data.id});">
+
+            <div class="product-card" class="${data.category}" id="" onClick="addToCart()">
 
             <div class="icons">
                 <!-- heart icon-->
@@ -54,7 +55,6 @@ async function fetchfromDB() {
 
             `
 
-
             // add product card styling
             productCard.classList.add("product-card")
 
@@ -72,8 +72,8 @@ async function fetchfromDB() {
 fetchfromDB()
 
 
-async function addToCart(id) {
-    console.log("Adding something to the cart..")
+async function addToCart(productID) {
+    //console.log("Adding something to the cart..")
     try {
         const response = await fetch(API_CART_URL, {
             method: 'POST',
@@ -81,7 +81,7 @@ async function addToCart(id) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                "item": id
+                id: productID
             })
             
         })
@@ -92,12 +92,14 @@ async function addToCart(id) {
         
         const data = await response.json()
         console.log(data)
+        
+        // store selected product id in local storage
+        localStorage.setItem('selectedProductID', productID)
 
     } catch (error) {
         console.error(error)
     }
 }
-
 
 
 
@@ -121,7 +123,7 @@ async function addToCart(id) {
 // toggle cart item
 bags.forEach(bag => {
     bag.addEventListener('click', function() {
-        alert("Workinf")
+        //alert("Workinf")
     })
 })
 
