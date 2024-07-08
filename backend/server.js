@@ -8,6 +8,10 @@ const app = express()
 // use cors middleware
 app.use(cors())
 
+// use body-parser middleware
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended:true }))
+
 // database connection
 mongoose
     .connect("mongodb://localhost:27017/shop_db")
@@ -94,7 +98,10 @@ app.post('/cart', async (req, res) => {
       // Create an iterm in the cart that has the same values.
 
       const newCartItem = new Cart({
-        cartItem // this just takes whatever we got in the query
+        id: req.body.id,
+        name: req.body.name,
+        prices: req.body.prices,
+        image: req.body.image,
       });
       
       

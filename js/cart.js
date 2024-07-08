@@ -15,49 +15,49 @@ let totalsContainer = document.querySelector(".total")
 const API_URL = "http://localhost:3000/cart"
 
 // sends GET request to backend 
-async function addToCart() {
-    try {
-        const response = await fetch(API_URL)
-        const data = response.json()
+// async function addToCart() {
+//     try {
+//         const response = await fetch(API_URL)
+//         const data = response.json()
 
         
         
-    } catch (error) {
-        console.error(error)
-    }
-}
+//     } catch (error) {
+//         console.error(error)
+//     }
+// }
 
-addToCart()
+// addToCart()
 
-async function fetchProducts() {
-    try {
-        const response = await fetch(API_URL)
-        const cartProducts = response.json()
+// async function fetchProducts() {
+//     try {
+//         const response = await fetch(API_URL)
+//         const cartProducts = response.json()
         
-    } catch (error) {
-        console.error(error)
-    }
-}
+//     } catch (error) {
+//         console.error(error)
+//     }
+// }
 
-fetchProducts()
+// fetchProducts()
 
-async function displayCustomerProducts() {
-    try {
+// async function displayCustomerProducts() {
+//     try {
         
-    } catch (error) {
-        console.error(error)
-    }
-}
+//     } catch (error) {
+//         console.error(error)
+//     }
+// }
 
-async function removeItem() {
-    try {
-        const response = await fetch(API_URL, {
-            method: 'DELETE'
-        })
-    } catch (error) {
-        console.error(error)
-    }
-}
+// async function removeItem() {
+//     try {
+//         const response = await fetch(API_URL, {
+//             method: 'DELETE'
+//         })
+//     } catch (error) {
+//         console.error(error)
+//     }
+// }
 
 let counter = 0
 reduceQty.addEventListener('click', () => {
