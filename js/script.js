@@ -1,16 +1,8 @@
 
-let hearts = document.querySelectorAll(".fa-heart")
-let bags = document.querySelector(".fa-bag-shopping")
+let hearts = document.querySelectorAll("#other-hearts")
+let bags = document.querySelectorAll(".fa-bag-shopping")
 let whatsappBtn = document.querySelector(".fa-whatsapp")
-
-const addToFavorites = () => {
-    // toggle red heart
-    let heart = event.target
-    heart.classList.toggle(".red-heart-class")
-    
-}
-
-
+let navHeart = document.querySelector("#nav-heart")
 
 
 // toggle red heart
@@ -34,27 +26,26 @@ hearts.forEach(heart => {
     })
 })
 
-// toggle cart item
+// toggle cart item color
+
 bags.forEach(bag => {
     bag.addEventListener('click', function() {
-        if (bag.style.color === 'white') {
-            bag.style.color = 'black'
+        if (bag.style.color === '') {
+            bag.style.color = '#898E4C'
             setTimeout(() => {
-                alert("Added to bag! ")
-                
+                alert("Added to cart! ")
             }, 100)
             
         } else {
-            bag.style.color = 'white'
-            setTimeout(() => {
-                alert("Removed from bag")
+            bag.style.color = ''
+            setTimeout(() => { 
+                alert("Removed from cart! ")
             }, 100)
         }
     })
 })
 
 
-burgerMenu.addEventListener('click', toggleMenu)
 
 
 
@@ -78,3 +69,5 @@ searchBtn.addEventListener('click', function() {
 // user.addEventListener('click', function() {
 //     // display user page with order history
 // })
+
+

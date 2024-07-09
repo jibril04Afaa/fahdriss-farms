@@ -84,6 +84,7 @@ nav .nav-buttons ul li {
 }
 .products .products-container .product-card .icons i {
   padding: 0.4rem;
+  color: white;
 }
 .products .products-container .product-card .product-image {
   display: flex;

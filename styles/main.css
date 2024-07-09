@@ -263,14 +263,24 @@ footer .social-media-links ul {
 }
 
 @media (min-width: 320px) {
-  nav {
+  .fa-heart, .search-container {
     display: none;
+  }
+  nav {
+    justify-content: space-around;
     background-color: #fffffa;
   }
-  nav ul a {
+  nav .links {
+    display: none;
+  }
+  nav .links a {
     padding: 1rem;
     display: block;
-    font-size: 1.3rem;
+    font-size: 1rem;
+  }
+  nav .nav-buttons {
+    display: flex;
+    justify-content: flex-end;
   }
   a .fa-bars {
     background-color: #898E4C;

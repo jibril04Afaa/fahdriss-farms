@@ -81,6 +81,9 @@ fetchSelectedProduct()
 
 clearCartbtn.addEventListener('click', function() {
     basketContainer.textContent = ''
+    totalsContainer.textContent = ''
+
+    // log an "empty basket" message
 
 })
 

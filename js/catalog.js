@@ -1,10 +1,8 @@
 
 let learnMoreBtns = document.querySelectorAll(".learn-more-btn")
-let hearts = document.querySelectorAll(".fa-heart")
 let productInfo = document.querySelector(".product-info")
 let productDescs = document.querySelectorAll(".product-desc")
 let body = document.querySelector("body")
-let bags = document.querySelectorAll(".fa-bag-shopping")
 
 
 
@@ -14,6 +12,11 @@ let OGProductCard = document.querySelector(".product-card")
 
 const API_PRODUCT_URL = "http://localhost:3000/products"
 const API_CART_URL = "http://localhost:3000/cart"
+
+
+
+
+
 
 // fetch product data from database and populate catalog.html
 async function fetchfromDB() {
@@ -101,43 +104,48 @@ async function addToCart(productID) {
     }
 }
 
-
-
-// toggle red heart
-
-
-// hearts.forEach(heart => {
-//     heart.addEventListener('click', function() {
-//         if (heart.style.color != 'red') {
-//             heart.style.color = 'red'
-//         } else {
-//             heart.style.color = 'black'
-//         }
-        
-//     })
-// })
-
-
-
-
-// toggle cart item
-bags.forEach(bag => {
-    bag.addEventListener('click', function() {
-        //alert("Workinf")
-    })
-})
-
+// used event delegation to add listener to dynamic html fetched from the database
 productCardParent.addEventListener('click', function(event) {
-    if (event.target.style.color != '#898E4C') {
-        event.target.style.color = '#898E4C'
-      //  addToCart(productCardParent.id)
-       // console.log(productCardParent)
-     //   console.log(productCardParent.id)
+    let target = event.target
+        
+    // toggle red heart
+    if (target.classList.contains("fa-heart")) {
+        if (target.style.color != "red") {
+            target.style.color = "red"
+            setTimeout(() => {
+                alert("Added to favorites! ")
+            }, 100)
+        } else {
+            target.style.color = "white"
+            setTimeout(() => {
+                alert("Removed from favorites! ")
+            }, 100)
+        }
+    }
 
-    } else {
-        event.target.style.color = 'black'
+    // toggle cart item color
+    if (target.classList.contains("fa-bag-shopping")) {
+        if (target.style.color != "#898E4C") {
+            target.style.color = "#898E4C"
+            setTimeout(() => {
+                alert("Added to cart! ")
+            }, 100)
+        } else {
+            // TODO: fix why the cart is not going back to white
+            target.style.color = "white"
+            setTimeout(() => {
+                alert("Removed from cart! ")
+            }, 100)
+        }
     }
 })
+
+
+
+
+
+
+
 
 
 // code from stack overflow user Mervis Mascarenhas
