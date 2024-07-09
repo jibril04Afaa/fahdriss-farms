@@ -33,16 +33,16 @@ i {
   cursor: pointer;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-}
 nav ul {
   display: flex;
   justify-content: space-around;
 }
 nav .nav-buttons ul li {
   color: black;
+}
+
+i {
+  color: #898E4C;
 }
 
 .title {
@@ -99,13 +99,30 @@ nav .nav-buttons ul li {
   gap: 1rem;
 }
 @media (min-width: 320px) {
-  nav ul {
-    display: flex;
-    justify-content: center;
+  nav {
+    justify-content: space-around;
+    background-color: #fffffa;
+  }
+  nav .links {
+    display: none;
+  }
+  nav .links a {
+    padding: 1rem;
+    display: block;
+    font-size: 1rem;
   }
   nav .nav-buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+  }
+  nav .nav-buttons ul {
+    gap: 1rem;
+  }
+  nav .nav-buttons ul .search-container {
+    display: none;
+  }
+  nav .nav-buttons ul .heart-container {
+    display: none;
   }
   .title {
     margin-top: 3rem;

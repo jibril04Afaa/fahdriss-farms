@@ -3,6 +3,7 @@ let learnMoreBtns = document.querySelectorAll(".learn-more-btn")
 let productInfo = document.querySelector(".product-info")
 let productDescs = document.querySelectorAll(".product-desc")
 let body = document.querySelector("body")
+let productCard;
 
 
 
@@ -12,9 +13,6 @@ let OGProductCard = document.querySelector(".product-card")
 
 const API_PRODUCT_URL = "http://localhost:3000/products"
 const API_CART_URL = "http://localhost:3000/cart"
-
-
-
 
 
 
@@ -74,7 +72,7 @@ async function fetchfromDB() {
 
 fetchfromDB()
 
-
+// change function to dynamically get productID
 async function addToCart(productID) {
     //console.log("Adding something to the cart..")
     try {
@@ -144,32 +142,77 @@ productCardParent.addEventListener('click', function(event) {
 
 
 
-
-
-
-
-// code from stack overflow user Mervis Mascarenhas
 // mobile options
-// const selectElement = document.getElementsByName('drop_select')[0];
+const selectElement = document.querySelector('.drop_select')
+// categories from database
+const categories = ['spice', 'health', 'N/A', 'millet and porridge']
 
-// let spices = document.querySelectorAll(".spice")
-// let milletAndPorridges = document.querySelectorAll(".Millet")
-// let healthSupplements = document.querySelectorAll(".health")
+// event delegation for dynamic HTML fetched from database
+selectElement.addEventListener('change', function(event) {
+    let selectedValue = event.target.value
+    //console.log(selectedValue)
 
+    // get actual values from database
+    async function getData() {
+        try {
+            const res = await fetch(API_PRODUCT_URL)
+            const parsedRes = await res.json()
+            
+            // loop through json database
+            parsedRes.forEach(prod => {
+                const category = prod.category
+                const name = prod.name
+                const image = prod.image
+                const width = prod.width
+                const height = prod.height
+                const prices = prod.prices
 
-// selectElement.addEventListener('change', function(event) {
-//     const selectedValue = event.target.value
-//     if (selectedValue === 'sort-by-spices') {
-//         // display spices
-//     }
+                // empty DOM
+                
 
-//     if (selectedValue === 'sort-by-millet') {
-//         // display spices
-//         console.log(milletAndPorridges)
-//         // milletAndPorridges.forEach(millet => {
-//         //     console.log(millet)
-//         // })
-//     }
+                // create new element to store sorted products
+                let newSortedProduct = document.createElement('div')
+                newSortedProduct.classList.add('product-card')
+                newSortedProduct.classList.add(category)
+                newSortedProduct.innerHTML = 
 
+                `
 
-// })
+                <div class="product-card" class="${category}" id="" onClick="addToCart()">
+    
+                <div class="icons">
+                    <!-- heart icon-->
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                    <!-- shopping bag-->
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+    
+                <div class="product-image">
+                    <img src = "${image}" width = "${width}" height = "${height}">
+                </div>
+    
+                <div class="product-info">
+                    <h5 class="price">${prices}</h5>
+                    <h5 class="product-name">${name}</h5>
+                </div>
+            </div>
+    
+                `
+
+                // append product card to parent element if it matches selected category
+                if (selectedValue === 'sort-by-spices' && category === 'spices') {
+                    productCardParent.appendChild(newSortedProduct)
+                }
+
+                
+            })
+            
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
+    getData()
+
+})
+

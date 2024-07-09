@@ -438,27 +438,31 @@ nav {
         .nav-buttons {
             display: flex;
             justify-content: flex-end;
-            //border: 2px solid red;
+            
             ul {
-                li {
-                    i {
-
-                    }
-                }
-
-                li {
+                gap: 1rem;
+                .search-container {
+                    display: none;
                     i {
                         
                     }
                 }
 
-                li {
+                .heart-container {
+                    display: none;
                     i {
                         
                     }
                 }
 
-                li {
+                // bag not showing!
+                .bag-container {
+                    i {
+                        
+                    }
+                }
+
+                .user-container {
                     a {
                         i {
                         

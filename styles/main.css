@@ -282,6 +282,15 @@ footer .social-media-links ul {
     display: flex;
     justify-content: flex-end;
   }
+  nav .nav-buttons ul {
+    gap: 1rem;
+  }
+  nav .nav-buttons ul .search-container {
+    display: none;
+  }
+  nav .nav-buttons ul .heart-container {
+    display: none;
+  }
   a .fa-bars {
     background-color: #898E4C;
     display: block;
