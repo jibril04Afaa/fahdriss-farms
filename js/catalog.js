@@ -14,6 +14,34 @@ let OGProductCard = document.querySelector(".product-card")
 const API_PRODUCT_URL = "http://localhost:3000/products"
 const API_CART_URL = "http://localhost:3000/cart"
 
+// change function to dynamically get productID
+async function addToCart() {
+    console.log("Adding something to the cart..")
+    try {
+        const response = await fetch(API_CART_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                id: "product ID"
+            })
+            
+        })
+
+        if (!response.ok) {
+            console.log("ERROR!")
+        }
+        
+        const data = await response.json()
+        console.log(data)
+        
+
+    } catch (error) {
+        console.error(error)
+    }
+}
+
 
 
 // fetch product data from database and populate catalog.html
@@ -61,7 +89,6 @@ async function fetchfromDB() {
 
             // give product card a parent
             productCardParent.appendChild(productCard)
-            
         })
 
     } catch (error) {
@@ -72,35 +99,9 @@ async function fetchfromDB() {
 
 fetchfromDB()
 
-// change function to dynamically get productID
-async function addToCart(productID) {
-    //console.log("Adding something to the cart..")
-    try {
-        const response = await fetch(API_CART_URL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                id: productID
-            })
-            
-        })
 
-        if (!response.ok) {
-            console.log("ERROR!")
-        }
-        
-        const data = await response.json()
-        console.log(data)
-        
-        // store selected product id in local storage
-        localStorage.setItem('selectedProductID', productID)
 
-    } catch (error) {
-        console.error(error)
-    }
-}
+
 
 // used event delegation to add listener to dynamic html fetched from the database
 productCardParent.addEventListener('click', function(event) {
@@ -125,6 +126,7 @@ productCardParent.addEventListener('click', function(event) {
     if (target.classList.contains("fa-bag-shopping")) {
         if (target.style.color != "#898E4C") {
             target.style.color = "#898E4C"
+            // addToCart()
             setTimeout(() => {
                 alert("Added to cart! ")
             }, 100)
@@ -216,3 +218,4 @@ selectElement.addEventListener('change', function(event) {
 
 })
 
+export { addToCart }
