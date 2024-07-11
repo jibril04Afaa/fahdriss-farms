@@ -1,4 +1,3 @@
-import { addToCart } from "./catalog"
 let price = document.querySelector(".amount-price")
 let reduceQty = document.querySelector(".reduce")
 let increaseQty = document.querySelector(".increase")
@@ -6,6 +5,8 @@ let quantity = document.querySelector(".product-quantity")
 let basketContainer = document.querySelector(".basket")
 let totalsContainer = document.querySelector(".total")
 let clearCartbtn = document.querySelector(".clear-cart-btn")
+// let productCardParent = document.createElement('div')
+
 
 // parent
 let basket = document.querySelector(".basket")
@@ -17,7 +18,7 @@ let basket = document.querySelector(".basket")
 //     totalsContainer.textContent = ''
 // }
 
-addToCart()
+// addToCart()
 
 const API_CART_URL_CART_JS = "http://localhost:3000/cart"
 const API_PRODUCT_URL_CART_JS = "http://localhost:3000/products"
@@ -89,31 +90,32 @@ clearCartbtn.addEventListener('click', function() {
 
 })
 
-// let counter = 0
-// reduceQty.addEventListener('click', () => {
-//     counter -= 1
-//     quantity.textContent = counter
 
-//     // TODO: FIX COUNTER
-//     if (counter < 1) {
-//         alert("Cannot have less than 0 items in cart! ")
-//         counter = 0
-//     }
-// })
+async function addToCart() {
+    console.log("Adding something to the cart..")
+    try {
+        const response = await fetch(API_CART_URL_CART_JS, {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            
+        })
 
-// increaseQty.addEventListener('click', () => {
-//     counter += 1
-//     quantity.textContent = counter
-// })
+        if (!response.ok) {
+            console.log("ERROR!")
+        }
+        
+        const data = await response.json()
+        data.forEach(d => {
+            console.log(d)
+        })
+        
 
-// // parent is basket div from cart.html
-// let cartProductParent = document.querySelector(".basket")
+    } catch (error) {
+        console.error(error)
+    }
+}
 
-// // populate basket/bag with items that have the bag color to be black
-// let appendedProduct = document.createElement("div")
 
-// // add appendedProduct as a child of product parents from cart.html
-// cartProductParent.appendChild(appendedProduct)
-// // add styles from cart.scss
-// appendedProduct.classList.add("basket")
 
+//addToCart()

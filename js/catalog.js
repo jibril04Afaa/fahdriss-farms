@@ -1,13 +1,12 @@
-
-let learnMoreBtns = document.querySelectorAll(".learn-more-btn")
-let productInfo = document.querySelector(".product-info")
-let productDescs = document.querySelectorAll(".product-desc")
-let body = document.querySelector("body")
-let productCard;
-
-
-
+let bags = document.querySelectorAll(".fa-bag-shopping")
 let productCardParent = document.querySelector(".products-container")
+let productInfo = document.querySelector(".product-info")
+const selectElement = document.querySelector('.drop_select')
+//let productCard;
+
+
+
+
 let OGProductCard = document.querySelector(".product-card")
 
 
@@ -16,16 +15,16 @@ const API_CART_URL = "http://localhost:3000/cart"
 
 // change function to dynamically get productID
 async function addToCart() {
-    console.log("Adding something to the cart..")
+    // console.log("Adding something to the cart..")
     try {
         const response = await fetch(API_CART_URL, {
-            method: 'POST',
+            // method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({
-                id: "product ID"
-            })
+            // body: JSON.stringify({
+            //     id: "product ID"
+            // })
             
         })
 
@@ -34,7 +33,23 @@ async function addToCart() {
         }
         
         const data = await response.json()
-        console.log(data)
+
+
+        // grab the id from the bag that has been clicked
+        bags.forEach(bagClicked => {
+            // get the id of the bag clicked
+            let newBagWithParent = productCardParent.appendChild(bagClicked)
+            let clickedBagParent = newBagWithParent.parentNode
+
+            if (clickedBagParent.style.color === '#898E4C') {
+                console.log("Selected")
+            } else {
+                console.log("not clicked")
+            }
+            console.log(clickedBagParent)
+            
+        })
+
         
 
     } catch (error) {
@@ -43,6 +58,7 @@ async function addToCart() {
 }
 
 
+console.log(productCardParent)
 
 // fetch product data from database and populate catalog.html
 async function fetchfromDB() {
@@ -57,13 +73,13 @@ async function fetchfromDB() {
         parsedData.forEach(data => {
             // create new product card
             let productCard = document.createElement('div')
-            
+            let productID = data.id
 
             // dynamically populate data to the product cards
             productCard.innerHTML = 
             `
 
-            <div class="product-card" class="${data.category}" id="" onClick="addToCart()">
+            <div class="product-card" class="${data.category}" id="${productID}" onClick="addToCart()">
 
             <div class="icons">
                 <!-- heart icon-->
@@ -97,13 +113,12 @@ async function fetchfromDB() {
 
 }
 
-fetchfromDB()
-
 
 
 
 
 // used event delegation to add listener to dynamic html fetched from the database
+
 productCardParent.addEventListener('click', function(event) {
     let target = event.target
         
@@ -126,7 +141,7 @@ productCardParent.addEventListener('click', function(event) {
     if (target.classList.contains("fa-bag-shopping")) {
         if (target.style.color != "#898E4C") {
             target.style.color = "#898E4C"
-            // addToCart()
+            addToCart()
             setTimeout(() => {
                 alert("Added to cart! ")
             }, 100)
@@ -141,11 +156,11 @@ productCardParent.addEventListener('click', function(event) {
 })
 
 
-
+fetchfromDB()
 
 
 // mobile options
-const selectElement = document.querySelector('.drop_select')
+
 // categories from database
 const categories = ['spice', 'health', 'N/A', 'millet and porridge']
 
@@ -218,4 +233,6 @@ selectElement.addEventListener('change', function(event) {
 
 })
 
-export { addToCart }
+
+
+
