@@ -17,8 +17,7 @@ let basket = document.querySelector(".basket")
 //     basketContainer.style.textAlign = 'center'
 //     totalsContainer.textContent = ''
 // }
-
-// addToCart()
+// import { addToCart } from "./catalog.mjs"
 
 const API_CART_URL_CART_JS = "http://localhost:3000/cart"
 const API_PRODUCT_URL_CART_JS = "http://localhost:3000/products"
@@ -78,6 +77,7 @@ async function fetchSelectedProduct() {
     }
 }
 
+// addToCart()
 // get product id selected
 fetchSelectedProduct()
 
@@ -91,31 +91,3 @@ clearCartbtn.addEventListener('click', function() {
 })
 
 
-async function addToCart() {
-    console.log("Adding something to the cart..")
-    try {
-        const response = await fetch(API_CART_URL_CART_JS, {
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            
-        })
-
-        if (!response.ok) {
-            console.log("ERROR!")
-        }
-        
-        const data = await response.json()
-        data.forEach(d => {
-            console.log(d)
-        })
-        
-
-    } catch (error) {
-        console.error(error)
-    }
-}
-
-
-
-//addToCart()
